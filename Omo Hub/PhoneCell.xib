@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="phoneCell" rowHeight="50" id="KGk-i7-Jjw" customClass="PhoneCell" customModule="Omo_Hub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8a4-nw-HU6">
+                        <rect key="frame" x="41" y="8" width="53" height="13"/>
+                        <attributedString key="attributedText">
+                            <fragment content="PHONE">
+                                <attributes>
+                                    <font key="NSFont" size="15" name="HelveticaNeue-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bg7-ch-pKF">
+                        <rect key="frame" x="41" y="19" width="271" height="30"/>
+                        <attributedString key="attributedText">
+                            <fragment content="(424) 249 - 3700">
+                                <attributes>
+                                    <font key="NSFont" size="12" name="HelveticaNeue"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phoneicon" translatesAutoresizingMaskIntoConstraints="NO" id="ny8-6t-FnX">
+                        <rect key="frame" x="8" y="12" width="25" height="25"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="25" id="BSl-z1-hEm"/>
+                            <constraint firstAttribute="height" constant="25" id="PoU-6D-NJN"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottomMargin" secondItem="8a4-nw-HU6" secondAttribute="bottom" constant="20" id="FuK-AH-X5r"/>
+                    <constraint firstAttribute="bottom" secondItem="bg7-ch-pKF" secondAttribute="bottom" id="HRd-av-dgB"/>
+                    <constraint firstItem="ny8-6t-FnX" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="HdA-ch-dnV"/>
+                    <constraint firstItem="8a4-nw-HU6" firstAttribute="leading" secondItem="bg7-ch-pKF" secondAttribute="leading" id="IZh-bj-SoY"/>
+                    <constraint firstItem="8a4-nw-HU6" firstAttribute="leading" secondItem="ny8-6t-FnX" secondAttribute="trailing" constant="8" symbolic="YES" id="Mhi-QJ-wqe"/>
+                    <constraint firstItem="bg7-ch-pKF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="11" id="VMD-KK-BEb"/>
+                    <constraint firstItem="8a4-nw-HU6" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="c2T-BP-wMN"/>
+                    <constraint firstItem="bg7-ch-pKF" firstAttribute="trailing" secondItem="H2p-sc-9uM" secondAttribute="trailingMargin" id="cZt-gT-6PV"/>
+                    <constraint firstItem="ny8-6t-FnX" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cm3-S5-Z1v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerLabel" destination="8a4-nw-HU6" id="ol4-Sg-l5a"/>
+                <outlet property="phoneImg" destination="ny8-6t-FnX" id="RnT-6Y-Gx8"/>
+                <outlet property="phoneLabel" destination="bg7-ch-pKF" id="iCu-BC-5vk"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="phoneicon" width="25" height="25"/>
+    </resources>
+</document>

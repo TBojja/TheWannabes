@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" id="KGk-i7-Jjw" customClass="ReservationsCell" customModule="Omo_Hub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="iconCopy3" translatesAutoresizingMaskIntoConstraints="NO" id="zaD-E6-rzS">
+                        <rect key="frame" x="8" y="23" width="34" height="34"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="34" id="e6M-S2-AwC"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sHq-64-I6f">
+                        <rect key="frame" x="49" y="23" width="120" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="120" id="0vI-ga-yku"/>
+                        </constraints>
+                        <attributedString key="attributedText"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bYU-nY-0p7">
+                        <rect key="frame" x="49" y="41" width="194" height="30"/>
+                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vectorAmount" translatesAutoresizingMaskIntoConstraints="NO" id="FQA-XE-wVN">
+                        <rect key="frame" x="313" y="30" width="24" height="18"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="24" id="fzr-pX-GXM"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="review" translatesAutoresizingMaskIntoConstraints="NO" id="5NA-2N-8Se">
+                        <rect key="frame" x="272" y="27" width="18" height="24"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="18" id="cSe-mY-Hdb"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="FQA-XE-wVN" firstAttribute="leading" secondItem="5NA-2N-8Se" secondAttribute="trailing" constant="23" id="0cq-sc-kx7"/>
+                    <constraint firstItem="FQA-XE-wVN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="22" id="3Qw-vB-jZg"/>
+                    <constraint firstItem="5NA-2N-8Se" firstAttribute="centerY" secondItem="FQA-XE-wVN" secondAttribute="centerY" id="4AL-yk-e5j"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="FQA-XE-wVN" secondAttribute="trailing" constant="30" id="EPX-wX-ZO7"/>
+                    <constraint firstItem="zaD-E6-rzS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="15" id="Kcd-TC-WB5"/>
+                    <constraint firstItem="bYU-nY-0p7" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="33" id="SPz-Cu-sXD"/>
+                    <constraint firstItem="bYU-nY-0p7" firstAttribute="bottom" secondItem="H2p-sc-9uM" secondAttribute="bottomMargin" id="Vs5-7x-h12"/>
+                    <constraint firstItem="zaD-E6-rzS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="XkZ-gQ-S4I"/>
+                    <constraint firstItem="5NA-2N-8Se" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="19" id="adG-eP-7MW"/>
+                    <constraint firstItem="zaD-E6-rzS" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="cPw-MM-UQK"/>
+                    <constraint firstItem="5NA-2N-8Se" firstAttribute="leading" secondItem="bYU-nY-0p7" secondAttribute="trailing" constant="29" id="dy4-S7-zwV"/>
+                    <constraint firstItem="5NA-2N-8Se" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="eeB-0w-SHe"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="sHq-64-I6f" secondAttribute="bottom" constant="28" id="gk5-NN-nuf"/>
+                    <constraint firstItem="sHq-64-I6f" firstAttribute="leading" secondItem="bYU-nY-0p7" secondAttribute="leading" id="uaf-CL-Whn"/>
+                    <constraint firstItem="zaD-E6-rzS" firstAttribute="top" secondItem="sHq-64-I6f" secondAttribute="top" id="yFo-38-ifb"/>
+                    <constraint firstItem="sHq-64-I6f" firstAttribute="leading" secondItem="zaD-E6-rzS" secondAttribute="trailing" constant="7" id="zBY-Ke-miH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="infoLabel" destination="bYU-nY-0p7" id="sXd-GE-LjZ"/>
+                <outlet property="joinImg" destination="zaD-E6-rzS" id="i3t-Cy-hHZ"/>
+                <outlet property="nameLabel" destination="sHq-64-I6f" id="Dev-2D-fiX"/>
+                <outlet property="orderImg" destination="5NA-2N-8Se" id="g10-5P-nA2"/>
+                <outlet property="paidImg" destination="FQA-XE-wVN" id="gDT-XU-3N6"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="iconCopy3" width="33" height="33"/>
+        <image name="review" width="29" height="40"/>
+        <image name="vectorAmount" width="45" height="32"/>
+    </resources>
+</document>
