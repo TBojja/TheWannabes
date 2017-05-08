@@ -27,6 +27,7 @@ class MainMenuVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         menuViewController.view.frame = self.view.frame
         self.view.addSubview(menuViewController.view)
         menuViewController.didMove(toParentViewController: self)
+        
     }
     
     
@@ -112,8 +113,6 @@ class MainMenuVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
         
         self.mapView.setRegion(region, animated: true)
         
-        
-        
     }
-
+    
 }

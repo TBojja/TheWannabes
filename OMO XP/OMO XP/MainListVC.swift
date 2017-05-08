@@ -11,9 +11,23 @@ import UIKit
 class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBAction func menu(_ sender: Any) {
+        
+        // Calls ProfileVC
+        let menuViewController = self.storyboard?.instantiateViewController(withIdentifier: "profile") as! ProfileVC
+        self.addChildViewController(menuViewController)
+        menuViewController.view.frame = self.view.frame
+        self.view.addSubview(menuViewController.view)
+        menuViewController.didMove(toParentViewController: self)
     }
     
     @IBAction func filter(_ sender: Any) {
+        
+        // Calls FilterVC
+        let filterViewController = self.storyboard?.instantiateViewController(withIdentifier: "filter") as! FilterVC
+        self.addChildViewController(filterViewController)
+        filterViewController.view.frame = self.view.frame
+        self.view.addSubview(filterViewController.view)
+        filterViewController.didMove(toParentViewController: self)
     }
     
     @IBAction func mainMapView(_ sender: Any) {

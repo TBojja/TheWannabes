@@ -9,6 +9,7 @@
 import UIKit
 
 class ProfileTableVC: UITableViewController {
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ProfileTableVC: UITableViewController {
         
         if indexPath.row == 4 {
             self.view.removeFromSuperview()
-            dismiss(animated: true, completion: nil)
+            dismiss(animated: false, completion: nil)
             let changeVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginVC
             self.navigationController?.pushViewController(changeVC, animated: true)
         
