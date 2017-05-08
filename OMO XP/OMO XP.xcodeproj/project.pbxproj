@@ -35,7 +35,6 @@
 		AF2FCAFD1E97A21A005AB964 /* TimesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2FCAFC1E97A21A005AB964 /* TimesCollectionViewCell.swift */; };
 		AF2FCAFF1E98548B005AB964 /* SearchPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2FCAFE1E98548B005AB964 /* SearchPageVC.swift */; };
 		AF4DA0201EA038C900BB0902 /* quilonvid.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF4DA01F1EA038C900BB0902 /* quilonvid.mp4 */; };
-		AF4DA0221EA0428300BB0902 /* lighthouse.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF4DA0211EA0428300BB0902 /* lighthouse.mp4 */; };
 		AF5F31141E99D8AF00CF088A /* JoinVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F31131E99D8AF00CF088A /* JoinVC.swift */; };
 		AF5F31161E99D93200CF088A /* JoinPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F31151E99D93200CF088A /* JoinPopupView.swift */; };
 		AF7CC39B1EBC593800D2B3B5 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC39A1EBC593800D2B3B5 /* Section.swift */; };
@@ -103,7 +102,6 @@
 		AF2FCAFC1E97A21A005AB964 /* TimesCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimesCollectionViewCell.swift; sourceTree = "<group>"; };
 		AF2FCAFE1E98548B005AB964 /* SearchPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchPageVC.swift; sourceTree = "<group>"; };
 		AF4DA01F1EA038C900BB0902 /* quilonvid.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = quilonvid.mp4; sourceTree = "<group>"; };
-		AF4DA0211EA0428300BB0902 /* lighthouse.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; name = lighthouse.mp4; path = "OMO XP/lighthouse.mp4"; sourceTree = "<group>"; };
 		AF5F31131E99D8AF00CF088A /* JoinVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinVC.swift; sourceTree = "<group>"; };
 		AF5F31151E99D93200CF088A /* JoinPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinPopupView.swift; sourceTree = "<group>"; };
 		AF7CC39A1EBC593800D2B3B5 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 			isa = PBXGroup;
 			children = (
 				AF4DA01F1EA038C900BB0902 /* quilonvid.mp4 */,
-				AF4DA0211EA0428300BB0902 /* lighthouse.mp4 */,
 				AF2FCABA1E9719D7005AB964 /* OMO XP */,
 				AF2FCAB91E9719D7005AB964 /* Products */,
 				AF2FCAEB1E977877005AB964 /* Frameworks */,
@@ -373,7 +370,6 @@
 				AF92FC161EB7466300D611DB /* kitchenhub.jpg in Resources */,
 				AF2FCAC61E9719D7005AB964 /* Assets.xcassets in Resources */,
 				AF2FCAD11E971A92005AB964 /* introimage.jpeg in Resources */,
-				AF4DA0221EA0428300BB0902 /* lighthouse.mp4 in Resources */,
 				AFF469D11EA43B8200F9038A /* brickwall.jpg in Resources */,
 				AF2FCAC11E9719D7005AB964 /* Main.storyboard in Resources */,
 			);

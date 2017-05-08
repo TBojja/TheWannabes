@@ -28,18 +28,21 @@ class ProfileTableVC: UITableViewController {
     // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        
+        
+        if indexPath.row == 4 {
             self.view.removeFromSuperview()
-            dismiss(animated: false, completion: nil)
-            let changeVC = self.storyboard?.instantiateViewController(withIdentifier: "home") as! MainMenuVC
+            dismiss(animated: true, completion: nil)
+            let changeVC = self.storyboard?.instantiateViewController(withIdentifier: "login") as! LoginVC
             self.navigationController?.pushViewController(changeVC, animated: true)
         
-        } else {
+/*          } else {
             
             self.view.removeFromSuperview()
             dismiss(animated: false, completion: nil)
             let changeVC = self.storyboard?.instantiateViewController(withIdentifier: "home") as! MainMenuVC
             self.navigationController?.pushViewController(changeVC, animated: true)
+ */
         }
     }
 
@@ -49,7 +52,7 @@ class ProfileTableVC: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 100
+        return 225
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -59,6 +62,10 @@ class ProfileTableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNormalMagnitude
     }
 
     /*

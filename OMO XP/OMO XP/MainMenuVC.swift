@@ -31,6 +31,13 @@ class MainMenuVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate
     
     
     @IBAction func filter(_ sender: Any) {
+        
+        // Calls FilterVC
+        let filterViewController = self.storyboard?.instantiateViewController(withIdentifier: "filter") as! FilterVC
+        self.addChildViewController(filterViewController)
+        filterViewController.view.frame = self.view.frame
+        self.view.addSubview(filterViewController.view)
+        filterViewController.didMove(toParentViewController: self)
     }
 
     @IBOutlet var mapView: MKMapView!

@@ -9,6 +9,16 @@
 import UIKit
 
 class FilterVC: UIViewController {
+    
+    @IBOutlet var sideFilterView: UIView!
+    
+    @IBOutlet var btnClose: UIButton!
+    
+    @IBAction func dismissSideFilter(_ sender: Any) {
+        self.view.frame = (CGRect(x: 375.0, y: 0.0, width: 375.0, height: 667.0))
+        
+    }
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
