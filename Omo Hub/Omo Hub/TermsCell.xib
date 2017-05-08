@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="termsCell" rowHeight="50" id="KGk-i7-Jjw" customClass="TermsCell" customModule="Omo_Hub" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="49.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check" translatesAutoresizingMaskIntoConstraints="NO" id="hZb-A0-iue">
+                        <rect key="frame" x="8" y="14" width="20" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="7ht-k5-83f"/>
+                            <constraint firstAttribute="width" constant="20" id="7zU-r5-ddW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LPK-e9-RLV">
+                        <rect key="frame" x="41" y="15" width="137" height="18"/>
+                        <attributedString key="attributedText">
+                            <fragment content="TERMS / SUPPORT">
+                                <attributes>
+                                    <font key="NSFont" size="15" name="HelveticaNeue-Medium"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                </attributes>
+                            </fragment>
+                        </attributedString>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hZb-A0-iue" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="2bO-Jh-xEF"/>
+                    <constraint firstItem="hZb-A0-iue" firstAttribute="centerY" secondItem="LPK-e9-RLV" secondAttribute="centerY" id="O3e-9A-qhT"/>
+                    <constraint firstItem="LPK-e9-RLV" firstAttribute="leading" secondItem="hZb-A0-iue" secondAttribute="trailing" constant="13" id="W0z-4K-Fc6"/>
+                    <constraint firstItem="hZb-A0-iue" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="dcZ-a1-CaX"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="headerLabel" destination="LPK-e9-RLV" id="gc3-Cx-FZi"/>
+                <outlet property="termsImg" destination="hZb-A0-iue" id="hTf-jz-7lV"/>
+            </connections>
+            <point key="canvasLocation" x="24.5" y="52"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="check" width="32" height="30"/>
+    </resources>
+</document>
