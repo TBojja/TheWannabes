@@ -46,6 +46,10 @@
 		AF7CC3BA1EBFF9F200D2B3B5 /* FilterTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC3B91EBFF9F200D2B3B5 /* FilterTableVC.swift */; };
 		AF7CC3C11EC1C0AB00D2B3B5 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC3BF1EC1C0AB00D2B3B5 /* SearchResultCell.swift */; };
 		AF7CC3C21EC1C0AB00D2B3B5 /* SearchResultCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7CC3C01EC1C0AB00D2B3B5 /* SearchResultCell.xib */; };
+		AF7CC3C71EC27DA600D2B3B5 /* MainListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC3C51EC27DA600D2B3B5 /* MainListCell.swift */; };
+		AF7CC3C81EC27DA600D2B3B5 /* MainListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7CC3C61EC27DA600D2B3B5 /* MainListCell.xib */; };
+		AF7CC3CB1EC285FC00D2B3B5 /* MainListCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC3C91EC285FC00D2B3B5 /* MainListCell2.swift */; };
+		AF7CC3CC1EC285FC00D2B3B5 /* MainListCell2.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7CC3CA1EC285FC00D2B3B5 /* MainListCell2.xib */; };
 		AF92FC161EB7466300D611DB /* kitchenhub.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AF92FC151EB7466300D611DB /* kitchenhub.jpg */; };
 		AFAA31761E9A797D009CD110 /* InfoPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA31751E9A797D009CD110 /* InfoPopupView.swift */; };
 		AFAA31781E9A7993009CD110 /* PhonePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA31771E9A7993009CD110 /* PhonePopupView.swift */; };
@@ -61,7 +65,6 @@
 		AFB4DA381EA82B6600769728 /* HowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4DA371EA82B6600769728 /* HowView.swift */; };
 		AFF469C71EA2FAC000F9038A /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469C61EA2FAC000F9038A /* PopupView.swift */; };
 		AFF469C91EA2FB0100F9038A /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469C81EA2FB0100F9038A /* PopupVC.swift */; };
-		AFF469CB1EA4303500F9038A /* MainListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469CA1EA4303500F9038A /* MainListViewCell.swift */; };
 		AFF469D01EA43B8200F9038A /* chairs.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFF469CC1EA43B8200F9038A /* chairs.jpg */; };
 		AFF469D11EA43B8200F9038A /* brickwall.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFF469CD1EA43B8200F9038A /* brickwall.jpg */; };
 		AFF469D21EA43B8200F9038A /* res.jpg in Resources */ = {isa = PBXBuildFile; fileRef = AFF469CE1EA43B8200F9038A /* res.jpg */; };
@@ -114,6 +117,10 @@
 		AF7CC3B91EBFF9F200D2B3B5 /* FilterTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterTableVC.swift; sourceTree = "<group>"; };
 		AF7CC3BF1EC1C0AB00D2B3B5 /* SearchResultCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultCell.swift; sourceTree = "<group>"; };
 		AF7CC3C01EC1C0AB00D2B3B5 /* SearchResultCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultCell.xib; sourceTree = "<group>"; };
+		AF7CC3C51EC27DA600D2B3B5 /* MainListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListCell.swift; sourceTree = "<group>"; };
+		AF7CC3C61EC27DA600D2B3B5 /* MainListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListCell.xib; sourceTree = "<group>"; };
+		AF7CC3C91EC285FC00D2B3B5 /* MainListCell2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListCell2.swift; sourceTree = "<group>"; };
+		AF7CC3CA1EC285FC00D2B3B5 /* MainListCell2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainListCell2.xib; sourceTree = "<group>"; };
 		AF92FC151EB7466300D611DB /* kitchenhub.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = kitchenhub.jpg; sourceTree = "<group>"; };
 		AFAA31751E9A797D009CD110 /* InfoPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoPopupView.swift; sourceTree = "<group>"; };
 		AFAA31771E9A7993009CD110 /* PhonePopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhonePopupView.swift; sourceTree = "<group>"; };
@@ -129,7 +136,6 @@
 		AFB4DA371EA82B6600769728 /* HowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowView.swift; sourceTree = "<group>"; };
 		AFF469C61EA2FAC000F9038A /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		AFF469C81EA2FB0100F9038A /* PopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
-		AFF469CA1EA4303500F9038A /* MainListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewCell.swift; sourceTree = "<group>"; };
 		AFF469CC1EA43B8200F9038A /* chairs.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = chairs.jpg; sourceTree = "<group>"; };
 		AFF469CD1EA43B8200F9038A /* brickwall.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = brickwall.jpg; sourceTree = "<group>"; };
 		AFF469CE1EA43B8200F9038A /* res.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = res.jpg; sourceTree = "<group>"; };
@@ -182,7 +188,10 @@
 				AF7CC3C41EC1DEFA00D2B3B5 /* Main Sign In / Create Acct Page */,
 				AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */,
 				AF2FCAF81E978C79005AB964 /* MainListVC.swift */,
-				AFF469CA1EA4303500F9038A /* MainListViewCell.swift */,
+				AF7CC3C51EC27DA600D2B3B5 /* MainListCell.swift */,
+				AF7CC3C61EC27DA600D2B3B5 /* MainListCell.xib */,
+				AF7CC3C91EC285FC00D2B3B5 /* MainListCell2.swift */,
+				AF7CC3CA1EC285FC00D2B3B5 /* MainListCell2.xib */,
 				AF7CC3A41EBDADCD00D2B3B5 /* SideMenus */,
 				AF7CC3961EB9408900D2B3B5 /* SearchBar - SideButtons */,
 				AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */,
@@ -371,6 +380,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF7CC3C81EC27DA600D2B3B5 /* MainListCell.xib in Resources */,
 				AF2FCAE01E972023005AB964 /* FontBNBold.otf in Resources */,
 				AF0F0AA31EB08A350027050C /* chef.png in Resources */,
 				AF4DA0201EA038C900BB0902 /* quilonvid.mp4 in Resources */,
@@ -380,6 +390,7 @@
 				AFF469D01EA43B8200F9038A /* chairs.jpg in Resources */,
 				AF2FCAE21E972023005AB964 /* FontBNLight.otf in Resources */,
 				AFF469D81EA43F1100F9038A /* cafe.jpg in Resources */,
+				AF7CC3CC1EC285FC00D2B3B5 /* MainListCell2.xib in Resources */,
 				AFF469D91EA43F1100F9038A /* stairs.jpg in Resources */,
 				AF2FCAE31E972023005AB964 /* FontBNRegular.otf in Resources */,
 				AFF469D21EA43B8200F9038A /* res.jpg in Resources */,
@@ -420,7 +431,9 @@
 				AF2FCAF71E977D38005AB964 /* SchedulePopupView.swift in Sources */,
 				AF2FCABE1E9719D7005AB964 /* ViewController.swift in Sources */,
 				AFAA31861E9B5206009CD110 /* RestaurantJoinVC.swift in Sources */,
+				AF7CC3C71EC27DA600D2B3B5 /* MainListCell.swift in Sources */,
 				AF2FCAF51E977CFE005AB964 /* ScheduleVC.swift in Sources */,
+				AF7CC3CB1EC285FC00D2B3B5 /* MainListCell2.swift in Sources */,
 				AF0F0AA51EB17CDB0027050C /* ReviewVC.swift in Sources */,
 				AFAA31781E9A7993009CD110 /* PhonePopupView.swift in Sources */,
 				AF5F31141E99D8AF00CF088A /* JoinVC.swift in Sources */,
@@ -439,7 +452,6 @@
 				AF2FCAE61E972499005AB964 /* LoginVC.swift in Sources */,
 				AFF469C91EA2FB0100F9038A /* PopupVC.swift in Sources */,
 				AF7CC39F1EBC5D2B00D2B3B5 /* StepsProcedureVC.swift in Sources */,
-				AFF469CB1EA4303500F9038A /* MainListViewCell.swift in Sources */,
 				AF2FCABC1E9719D7005AB964 /* AppDelegate.swift in Sources */,
 				AF7CC3BA1EBFF9F200D2B3B5 /* FilterTableVC.swift in Sources */,
 				AFF469C71EA2FAC000F9038A /* PopupView.swift in Sources */,

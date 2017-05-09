@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8gJ-lO-2km">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1115,39 +1115,14 @@
                                 <color key="separatorColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ListTableCell" rowHeight="150" id="tlI-2R-5rU" customClass="MainListViewCell" customModule="OMO_XP" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="150"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="listCell" rowHeight="200" id="tlI-2R-5rU" customClass="MainListViewCell" customModule="OMO_XP" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="tlI-2R-5rU" id="bb2-EB-gOw">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="149.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Bh-Nq-arh" userLabel="Restaurant Label">
-                                                    <rect key="frame" x="8" y="123" width="176" height="18"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="18" id="M73-YX-LdI"/>
-                                                        <constraint firstAttribute="width" constant="176" id="RLO-Mo-ZMW"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="19"/>
-                                                    <color key="textColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Vsv-yb-P9a">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="115"/>
-                                                </imageView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="7Bh-Nq-arh" firstAttribute="top" secondItem="Vsv-yb-P9a" secondAttribute="bottom" constant="8" symbolic="YES" id="87C-QX-ukd"/>
-                                                <constraint firstItem="7Bh-Nq-arh" firstAttribute="bottom" secondItem="bb2-EB-gOw" secondAttribute="bottomMargin" id="9Kp-vG-Uzb"/>
-                                                <constraint firstAttribute="trailing" secondItem="Vsv-yb-P9a" secondAttribute="trailing" id="Xzb-Ay-7A2"/>
-                                                <constraint firstItem="7Bh-Nq-arh" firstAttribute="leading" secondItem="bb2-EB-gOw" secondAttribute="leadingMargin" id="YTA-B0-Von"/>
-                                                <constraint firstItem="Vsv-yb-P9a" firstAttribute="leading" secondItem="bb2-EB-gOw" secondAttribute="leading" id="s82-uJ-dgV"/>
-                                                <constraint firstItem="Vsv-yb-P9a" firstAttribute="top" secondItem="bb2-EB-gOw" secondAttribute="top" id="tcP-1s-Ihk"/>
-                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="vendorImage" destination="Vsv-yb-P9a" id="G8O-Xi-HmP"/>
-                                            <outlet property="vendorTitle" destination="7Bh-Nq-arh" id="5T7-3W-hEE"/>
                                             <segue destination="ey0-oe-M2w" kind="show" identifier="selectedRestaurant" id="XfW-m2-H9I"/>
                                         </connections>
                                     </tableViewCell>
@@ -2538,13 +2513,13 @@ Every moment at The Church Key is an interactive experience. From our inventive 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="BLD-gh-Jyz"/>
-        <segue reference="23f-r2-MOc"/>
+        <segue reference="XfW-m2-H9I"/>
         <segue reference="tlM-G1-j3Y"/>
+        <segue reference="5yD-0f-pXz"/>
+        <segue reference="e2M-WC-LD1"/>
+        <segue reference="uv1-Vl-zhp"/>
+        <segue reference="lHG-CQ-n4F"/>
         <segue reference="CnN-Ry-oq7"/>
-        <segue reference="NUR-D4-nZN"/>
-        <segue reference="B11-Wc-Ze7"/>
-        <segue reference="o3V-kT-9EI"/>
-        <segue reference="ViV-4R-Nk0"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

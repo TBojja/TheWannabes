@@ -1,22 +1,26 @@
 //
-//  MainListViewCell.swift
+//  MainListCell.swift
 //  OMO XP
 //
-//  Created by Casper Castellini on 4/16/17.
+//  Created by Casper Castellini on 5/9/17.
 //  Copyright © 2017 Appomo. All rights reserved.
 //
 
 import UIKit
 
-class MainListViewCell: UITableViewCell {
-
+class MainListCell: UITableViewCell {
+    
     @IBOutlet var vendorImage: UIImageView!
     
-    @IBOutlet var vendorTitle: UILabel!
+    @IBOutlet var vendorLabel: UILabel!
     
+    @IBOutlet var vendorLocation: UILabel!
+  
+    @IBOutlet var cuisineLabel: UILabel!
     
+    @IBOutlet var amountLabel: UILabel!
     
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -27,5 +31,5 @@ class MainListViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
+    
 }

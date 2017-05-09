@@ -52,6 +52,12 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let restaurantLabel = ["Katana", "The Church Key", "BOA Steakhouse", "Iroha Sushi of Tokyo", "Tender Greens"]
     
+    let neighborhood = ["West Hollywood", "West Hollywood", "Beverly Hills", "Studio City", "Santa Monica"]
+    
+    let cuisine = ["Sushi", "American", "Steakhouse", "Sushi", "American"]
+    
+    let amount = ["$30 min", "$30 min", "$50 min", "$25 min", "$15 min"]
+    
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -61,14 +67,13 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ListTableCell", for: indexPath) as! MainListViewCell
-        
-        // _ = indexPath.row                 let row = indexPath.row immutable
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! MainListCell
         
         cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
-        
-        cell.vendorTitle.text = restaurantLabel[indexPath.row]
-        
+        cell.vendorLabel.text = restaurantLabel[indexPath.row]
+        cell.amountLabel.text = amount[indexPath.row]
+        cell.vendorLocation.text = neighborhood[indexPath.row]
+        cell.cuisineLabel.text = cuisine[indexPath.row]
         
         return cell
         
@@ -96,6 +101,9 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         listView.dataSource = self
         
         btnSearch.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 22.5, right: 162.5)
+        
+        let nibName = UINib(nibName: "MainListCell", bundle: nil)
+        listView.register(nibName, forCellReuseIdentifier: "listCell")
         
         // Do any additional setup after loading the view.
     }
