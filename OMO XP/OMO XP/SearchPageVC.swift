@@ -46,30 +46,40 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cellResults.count
     }
 
-    /*
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
         view.backgroundColor = UIColor.white
         
+     /*
         let image = UIImageView(image: cellImages[section])
         image.frame = CGRect(x: 5, y: 10, width: 18.5, height: 25)
         view.addSubview(image)
+     */
         
         let label = UILabel()
-        label.text = cellResults[section]
-        label.frame = CGRect(x: 30, y: 10, width: 280, height: 16.5)
+        label.text = "RESULTS"
+        label.textColor = UIColor.black
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        label.textAlignment = .center
+        label.frame = CGRect(x: 151, y: 0, width: 72, height: 18)
+        
         
         view.addSubview(label)
         
         return view
     }
-    */
+    
     
 
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
+    }
+    
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return .leastNormalMagnitude
     }
     
     
@@ -79,6 +89,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         cell.resultsLabel.text = cellResults[indexPath.row]
         cell.resultsLabel.numberOfLines = 0  // gives as many lines as needed in cell depending on content
+        cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
         return cell
         

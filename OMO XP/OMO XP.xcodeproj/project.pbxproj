@@ -191,9 +191,7 @@
 				AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */,
 				AF2FCAF81E978C79005AB964 /* MainListVC.swift */,
 				AFF469CA1EA4303500F9038A /* MainListViewCell.swift */,
-				AF2FCAFE1E98548B005AB964 /* SearchPageVC.swift */,
-				AF7CC3BF1EC1C0AB00D2B3B5 /* SearchResultCell.swift */,
-				AF7CC3C01EC1C0AB00D2B3B5 /* SearchResultCell.xib */,
+				AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */,
 				AF7CC3961EB9408900D2B3B5 /* SearchBar - SideButtons */,
 				AF2FCAFA1E979F73005AB964 /* RestaurantPresentationVC.swift */,
 				AF2FCAFC1E97A21A005AB964 /* TimesCollectionViewCell.swift */,
@@ -296,6 +294,16 @@
 				AF7CC3B11EBDC55600D2B3B5 /* ProfileTableVC.swift */,
 			);
 			name = SideMenus;
+			sourceTree = "<group>";
+		};
+		AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FCAFE1E98548B005AB964 /* SearchPageVC.swift */,
+				AF7CC3BF1EC1C0AB00D2B3B5 /* SearchResultCell.swift */,
+				AF7CC3C01EC1C0AB00D2B3B5 /* SearchResultCell.xib */,
+			);
+			name = SearchPage;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -2476,8 +2476,9 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-CV-qjo">
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8fE-CV-qjo">
                                 <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem id="c92-GL-1pX">
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6XX-WB-viZ">
@@ -2494,16 +2495,19 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Search " translatesAutoresizingMaskIntoConstraints="NO" id="OwW-yK-7JR">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Search " translatesAutoresizingMaskIntoConstraints="NO" id="OwW-yK-7JR">
                                 <rect key="frame" x="0.0" y="64" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
                             </searchBar>
-                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Current Location" translatesAutoresizingMaskIntoConstraints="NO" id="db2-5j-5zC">
+                            <searchBar contentMode="redraw" fixedFrame="YES" searchBarStyle="minimal" placeholder="Current Location" translatesAutoresizingMaskIntoConstraints="NO" id="db2-5j-5zC">
                                 <rect key="frame" x="0.0" y="108" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fde-xG-iW5">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fde-xG-iW5">
                                 <rect key="frame" x="0.0" y="152" width="375" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.69411764705882351" green="0.54117647058823526" blue="0.35686274509803922" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                             </button>
@@ -2514,8 +2518,9 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-f8-XCg">
-                                <rect key="frame" x="0.0" y="238" width="375" height="429"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="EUf-f8-XCg">
+                                <rect key="frame" x="0.0" y="187" width="375" height="480"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultsCell " rowHeight="44" id="Wwe-fl-ajD">
@@ -2545,36 +2550,8 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                                     <outlet property="delegate" destination="KlV-jc-lRj" id="qlV-6H-9bz"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RESULTS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4zY-kJ-pzV">
-                                <rect key="frame" x="151" y="198" width="72" height="18"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="db2-5j-5zC" secondAttribute="trailing" id="25m-HC-EZQ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="4zY-kJ-pzV" secondAttribute="trailing" constant="136" id="2Vq-Ha-coA"/>
-                            <constraint firstItem="Fde-xG-iW5" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leading" id="2sk-MX-InD"/>
-                            <constraint firstItem="db2-5j-5zC" firstAttribute="top" secondItem="OwW-yK-7JR" secondAttribute="bottom" id="CJA-l5-S4X"/>
-                            <constraint firstAttribute="trailing" secondItem="EUf-f8-XCg" secondAttribute="trailing" id="Hrz-7S-LTM"/>
-                            <constraint firstItem="Sj8-a5-EUg" firstAttribute="top" secondItem="EUf-f8-XCg" secondAttribute="bottom" id="OEC-w9-RYF"/>
-                            <constraint firstItem="EUf-f8-XCg" firstAttribute="top" secondItem="4zY-kJ-pzV" secondAttribute="bottom" constant="22" id="QU1-39-vJA"/>
-                            <constraint firstAttribute="trailing" secondItem="Fde-xG-iW5" secondAttribute="trailing" id="Syz-R1-WJp"/>
-                            <constraint firstAttribute="trailing" secondItem="OwW-yK-7JR" secondAttribute="trailing" id="W23-78-ua4"/>
-                            <constraint firstItem="EUf-f8-XCg" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leading" id="aPs-aB-53s"/>
-                            <constraint firstItem="8fE-CV-qjo" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leading" id="dl4-3Z-pxD"/>
-                            <constraint firstItem="4zY-kJ-pzV" firstAttribute="top" secondItem="Fde-xG-iW5" secondAttribute="bottom" constant="14" id="f3O-zu-P8n"/>
-                            <constraint firstItem="8fE-CV-qjo" firstAttribute="top" secondItem="06Q-3C-5Pl" secondAttribute="bottom" id="ivu-aX-w36"/>
-                            <constraint firstItem="EUf-f8-XCg" firstAttribute="top" secondItem="4zY-kJ-pzV" secondAttribute="bottom" constant="22" id="jIw-7M-Mkz"/>
-                            <constraint firstItem="OwW-yK-7JR" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leading" id="mAi-CH-Eo1"/>
-                            <constraint firstItem="4zY-kJ-pzV" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leadingMargin" constant="135" id="olC-kT-XLz"/>
-                            <constraint firstItem="OwW-yK-7JR" firstAttribute="top" secondItem="8fE-CV-qjo" secondAttribute="bottom" id="vQv-Zd-N4C"/>
-                            <constraint firstItem="db2-5j-5zC" firstAttribute="leading" secondItem="byW-LA-CXI" secondAttribute="leading" id="we8-z5-XI5"/>
-                            <constraint firstItem="Fde-xG-iW5" firstAttribute="top" secondItem="db2-5j-5zC" secondAttribute="bottom" id="y6U-3t-xdI"/>
-                            <constraint firstAttribute="trailing" secondItem="8fE-CV-qjo" secondAttribute="trailing" id="yfb-78-PXK"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="locationBar" destination="db2-5j-5zC" id="DzO-ul-d0z"/>
