@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O1x-DU-vnf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2518,11 +2518,11 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                                 <rect key="frame" x="0.0" y="238" width="375" height="429"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultCell " editingAccessoryType="disclosureIndicator" rowHeight="44" id="Wwe-fl-ajD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="resultsCell " rowHeight="44" id="Wwe-fl-ajD">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Wwe-fl-ajD" id="d1Q-Do-ggb">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uqE-A1-jCN" userLabel="Pin">
@@ -2640,12 +2640,12 @@ Every moment at The Church Key is an interactive experience. From our inventive 
     <inferredMetricsTieBreakers>
         <segue reference="BLD-gh-Jyz"/>
         <segue reference="23f-r2-MOc"/>
-        <segue reference="tlM-G1-j3Y"/>
-        <segue reference="e2M-WC-LD1"/>
-        <segue reference="5yD-0f-pXz"/>
-        <segue reference="uv1-Vl-zhp"/>
-        <segue reference="lHG-CQ-n4F"/>
         <segue reference="CnN-Ry-oq7"/>
+        <segue reference="ViV-4R-Nk0"/>
+        <segue reference="WR6-jk-a7I"/>
+        <segue reference="o3V-kT-9EI"/>
+        <segue reference="VCY-j9-OWi"/>
+        <segue reference="B11-Wc-Ze7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>

@@ -23,28 +23,30 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     @IBOutlet var scheduleLabel: UILabel!
     
-    // var scheduleToDisplay = ""
-    
-    
     @IBOutlet var resultsTableView: UITableView!
     
+    // var scheduleToDisplay = ""
     
     let cellImages: [UIImage] = [#imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy")]
     
     var cellResults: [String] = ["Katana", "The Church Key", "Tender Greens", "Fresh Corn Grill", "Serafina"]
     
-
+    var header: [String] = ["Results"]
+    
     func numberOfSections(in tableView: UITableView) -> Int {
-        
-        return 5
+        return header.count
     }
-
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
+    }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 0
+        return cellResults.count
     }
-    
+
+    /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
@@ -62,11 +64,9 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         return view
     }
+    */
     
-    
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 44
-    }
+
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
@@ -75,10 +75,10 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = UITableViewCell(style: UITableViewCellStyle.default, reuseIdentifier: "resultCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "resultsCell", for: indexPath) as! SearchResultCell
         
-        cell.textLabel?.text = cellResults[indexPath.row]
-        cell.textLabel?.numberOfLines = 0  // gives as many lines as needed in cell depending on content
+        cell.resultsLabel.text = cellResults[indexPath.row]
+        cell.resultsLabel.numberOfLines = 0  // gives as many lines as needed in cell depending on content
         
         return cell
         
@@ -96,6 +96,9 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         // scheduleLabel.text = scheduleToDisplay
         
+        let nibName = UINib(nibName: "SearchResultCell", bundle: nil)
+        resultsTableView.register(nibName, forCellReuseIdentifier: "resultsCell")
+        
         
         // Do any additional setup after loading the view.
     }
@@ -105,15 +108,5 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
