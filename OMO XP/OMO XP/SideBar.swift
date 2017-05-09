@@ -113,18 +113,5 @@ class SideBar: NSObject, SideBarTableVCDelegate {
     func sideBarControlDidSelectRow(indexPath: NSIndexPath) {
         delegate?.sideBarDidSelectButtonAtIndex(index: indexPath.row)
     }
-
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
 }

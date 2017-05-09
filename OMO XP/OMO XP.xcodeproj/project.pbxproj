@@ -59,7 +59,6 @@
 		AFAA31881E9B522C009CD110 /* RestaurantJoinView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFAA31871E9B522C009CD110 /* RestaurantJoinView.swift */; };
 		AFB4DA361EA82B4C00769728 /* HowVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4DA351EA82B4C00769728 /* HowVC.swift */; };
 		AFB4DA381EA82B6600769728 /* HowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFB4DA371EA82B6600769728 /* HowView.swift */; };
-		AFF469BF1EA1CBC400F9038A /* ProceduresVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469BE1EA1CBC400F9038A /* ProceduresVC.swift */; };
 		AFF469C71EA2FAC000F9038A /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469C61EA2FAC000F9038A /* PopupView.swift */; };
 		AFF469C91EA2FB0100F9038A /* PopupVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469C81EA2FB0100F9038A /* PopupVC.swift */; };
 		AFF469CB1EA4303500F9038A /* MainListViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFF469CA1EA4303500F9038A /* MainListViewCell.swift */; };
@@ -128,7 +127,6 @@
 		AFAA31871E9B522C009CD110 /* RestaurantJoinView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RestaurantJoinView.swift; sourceTree = "<group>"; };
 		AFB4DA351EA82B4C00769728 /* HowVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowVC.swift; sourceTree = "<group>"; };
 		AFB4DA371EA82B6600769728 /* HowView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HowView.swift; sourceTree = "<group>"; };
-		AFF469BE1EA1CBC400F9038A /* ProceduresVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProceduresVC.swift; sourceTree = "<group>"; };
 		AFF469C61EA2FAC000F9038A /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		AFF469C81EA2FB0100F9038A /* PopupVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupVC.swift; sourceTree = "<group>"; };
 		AFF469CA1EA4303500F9038A /* MainListViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainListViewCell.swift; sourceTree = "<group>"; };
@@ -177,27 +175,25 @@
 			children = (
 				AF2FCADA1E971F4C005AB964 /* Resources */,
 				AF2FCABB1E9719D7005AB964 /* AppDelegate.swift */,
-				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
-				AFF469BE1EA1CBC400F9038A /* ProceduresVC.swift */,
-				AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */,
-				AF7CC3A41EBDADCD00D2B3B5 /* SideMenus */,
-				AF7CC3A11EBC68EC00D2B3B5 /* Procedures */,
 				AF0F0A9A1EAEB1820027050C /* SideBarTableVC.swift */,
 				AF0F0A9C1EAEB6840027050C /* SideBar.swift */,
-				AF0F0AA61EB2AAD60027050C /* ATableViewCell.swift */,
-				AF0F0AA41EB17CDB0027050C /* ReviewVC.swift */,
+				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
 				AF2FCABD1E9719D7005AB964 /* ViewController.swift */,
-				AF2FCAE51E972499005AB964 /* LoginVC.swift */,
-				AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */,
+				AF7CC3C41EC1DEFA00D2B3B5 /* Main Sign In / Create Acct Page */,
+				AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */,
 				AF2FCAF81E978C79005AB964 /* MainListVC.swift */,
 				AFF469CA1EA4303500F9038A /* MainListViewCell.swift */,
-				AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */,
+				AF7CC3A41EBDADCD00D2B3B5 /* SideMenus */,
 				AF7CC3961EB9408900D2B3B5 /* SearchBar - SideButtons */,
+				AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */,
 				AF2FCAFA1E979F73005AB964 /* RestaurantPresentationVC.swift */,
+				AF7CC3951EB93F5F00D2B3B5 /* Restaurant Popups Views   */,
 				AF2FCAFC1E97A21A005AB964 /* TimesCollectionViewCell.swift */,
 				AFF469C81EA2FB0100F9038A /* PopupVC.swift */,
 				AFF469C61EA2FAC000F9038A /* PopupView.swift */,
-				AF7CC3951EB93F5F00D2B3B5 /* Restaurant Popups Views   */,
+				AF7CC3A11EBC68EC00D2B3B5 /* Procedures */,
+				AF0F0AA41EB17CDB0027050C /* ReviewVC.swift */,
+				AF0F0AA61EB2AAD60027050C /* ATableViewCell.swift */,
 				AF2FCAC51E9719D7005AB964 /* Assets.xcassets */,
 				AF2FCAC71E9719D7005AB964 /* LaunchScreen.storyboard */,
 				AF2FCACA1E9719D7005AB964 /* Info.plist */,
@@ -306,6 +302,15 @@
 			name = SearchPage;
 			sourceTree = "<group>";
 		};
+		AF7CC3C41EC1DEFA00D2B3B5 /* Main Sign In / Create Acct Page */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FCAE51E972499005AB964 /* LoginVC.swift */,
+				AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */,
+			);
+			name = "Main Sign In / Create Acct Page";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -404,7 +409,6 @@
 				AF2FCAFD1E97A21A005AB964 /* TimesCollectionViewCell.swift in Sources */,
 				AF7CC39B1EBC593800D2B3B5 /* Section.swift in Sources */,
 				AF7CC39D1EBC59E100D2B3B5 /* ExpandableHeaderView.swift in Sources */,
-				AFF469BF1EA1CBC400F9038A /* ProceduresVC.swift in Sources */,
 				AF2FCAE81E9724BC005AB964 /* CreateAcctVC.swift in Sources */,
 				AF0F0A9D1EAEB6840027050C /* SideBar.swift in Sources */,
 				AF2FCAFB1E979F73005AB964 /* RestaurantPresentationVC.swift in Sources */,

@@ -27,7 +27,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     // var scheduleToDisplay = ""
     
-    let cellImages: [UIImage] = [#imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy")]
+    // let cellImages: [UIImage] = [#imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy")]
     
     var cellResults: [String] = ["Katana", "The Church Key", "Tender Greens", "Fresh Corn Grill", "Serafina"]
     
@@ -38,7 +38,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 30
+        return 25
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -53,6 +53,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         view.backgroundColor = UIColor.white
         
      /*
+        // Uncomment to add a UIImage into cell row 
         let image = UIImageView(image: cellImages[section])
         image.frame = CGRect(x: 5, y: 10, width: 18.5, height: 25)
         view.addSubview(image)
@@ -61,18 +62,15 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         let label = UILabel()
         label.text = "RESULTS"
         label.textColor = UIColor.black
-        label.font = UIFont(name: "HelveticaNeue-Bold", size: 15)
+        label.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         label.textAlignment = .center
-        label.frame = CGRect(x: 151, y: 0, width: 72, height: 18)
+        label.frame = CGRect(x: 2.5, y: 2.5, width: 72, height: 15)
         
         
         view.addSubview(label)
         
         return view
     }
-    
-    
-
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 44
