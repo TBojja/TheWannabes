@@ -183,11 +183,9 @@
 				AF0F0A9C1EAEB6840027050C /* SideBar.swift */,
 				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
 				AF2FCABD1E9719D7005AB964 /* ViewController.swift */,
-				AF7CC3C41EC1DEFA00D2B3B5 /* Main Sign In / Create Acct Page */,
+				AF7CC3C41EC1DEFA00D2B3B5 /* SignIn/Create Acct pg */,
 				AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */,
-				AF2FCAF81E978C79005AB964 /* MainListVC.swift */,
-				AF7CC3C51EC27DA600D2B3B5 /* MainListCell.swift */,
-				AF7CC3C61EC27DA600D2B3B5 /* MainListCell.xib */,
+				AF7CC3D31EC314AD00D2B3B5 /* Main List View */,
 				AF7CC3A41EBDADCD00D2B3B5 /* SideMenus */,
 				AF7CC3961EB9408900D2B3B5 /* SearchBar - SideButtons */,
 				AF7CC3C31EC1D89B00D2B3B5 /* SearchPage */,
@@ -308,13 +306,23 @@
 			name = SearchPage;
 			sourceTree = "<group>";
 		};
-		AF7CC3C41EC1DEFA00D2B3B5 /* Main Sign In / Create Acct Page */ = {
+		AF7CC3C41EC1DEFA00D2B3B5 /* SignIn/Create Acct pg */ = {
 			isa = PBXGroup;
 			children = (
 				AF2FCAE51E972499005AB964 /* LoginVC.swift */,
 				AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */,
 			);
-			name = "Main Sign In / Create Acct Page";
+			name = "SignIn/Create Acct pg";
+			sourceTree = "<group>";
+		};
+		AF7CC3D31EC314AD00D2B3B5 /* Main List View */ = {
+			isa = PBXGroup;
+			children = (
+				AF2FCAF81E978C79005AB964 /* MainListVC.swift */,
+				AF7CC3C51EC27DA600D2B3B5 /* MainListCell.swift */,
+				AF7CC3C61EC27DA600D2B3B5 /* MainListCell.xib */,
+			);
+			name = "Main List View";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
