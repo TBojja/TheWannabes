@@ -48,15 +48,15 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet var listView: UITableView!
     
     
-    let restaurantImg = ["stairs", "dining", "bar", "table", "res", "cafe"]
+    let restaurantImg = ["stairs", "dining", "bar", "fancy", "res", "table"]
     
-    let restaurantLabel = ["Katana", "The Church Key", "BOA Steakhouse", "Iroha Sushi of Tokyo", "Tender Greens"]
+    let restaurantLabel = ["Katana", "The Church Key", "BOA Steakhouse", "Cecconi's", "Angelini Osteria", "Tender Greens"]
     
-    let neighborhood = ["West Hollywood", "West Hollywood", "Beverly Hills", "Studio City", "Santa Monica"]
+    let neighborhood = ["West Hollywood", "Mid-Wilshire", "Beverly Hills", "Studio City", "Santa Monica", "Fairfax"]
     
-    let cuisine = ["Sushi", "American", "Steakhouse", "Sushi", "American"]
+    let cuisine = ["Sushi", "American", "Steakhouse", "Italian", "Italian", "American"]
     
-    let amount = ["$30 min", "$30 min", "$50 min", "$25 min", "$15 min"]
+    let amount = ["$30 min", "$30 min", "$50 min", "$40 min", "$35 min", "$15 min"]
     
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,18 +73,21 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
         cell.vendorLabel.text = restaurantLabel[indexPath.row]
+        cell.vendorLabel.textColor = UIColor.darkGray
+        cell.vendorLabel.font = UIFont(name: "HelveticaNeue-Medium", size: 15)
         cell.amountLabel.text = amount[indexPath.row]
         cell.vendorLocation.text = neighborhood[indexPath.row]
         cell.cuisineLabel.text = cuisine[indexPath.row]
         
         return cell
         
-        } else if (indexPath.row == 1) {
+        } else if (indexPath.row == 1 ) {
         
             let cell = tableView.dequeueReusableCell(withIdentifier: "listCell2", for: indexPath) as! MainListCell2
             
             cell.vendorImg.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
             cell.vendorLabel.text = restaurantLabel[indexPath.row]
+            cell.vendorLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 15)
             cell.amountLabel.text = amount[indexPath.row]
             cell.vendorLocation.text = neighborhood[indexPath.row]
             cell.cuisineLabel.text = cuisine[indexPath.row]
@@ -97,6 +100,8 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             cell.vendorImg.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
             cell.vendorLabel.text = restaurantLabel[indexPath.row]
+            cell.vendorLabel.textColor = UIColor.darkGray
+            cell.vendorLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 15)
             cell.amountLabel.text = amount[indexPath.row]
             cell.vendorLocation.text = neighborhood[indexPath.row]
             cell.cuisineLabel.text = cuisine[indexPath.row]
