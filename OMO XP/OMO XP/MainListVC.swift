@@ -67,6 +67,8 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        if (indexPath.row == 0) {
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! MainListCell
         
         cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
@@ -76,6 +78,32 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.cuisineLabel.text = cuisine[indexPath.row]
         
         return cell
+        
+        } else if (indexPath.row == 1) {
+        
+            let cell = tableView.dequeueReusableCell(withIdentifier: "listCell2", for: indexPath) as! MainListCell2
+            
+            cell.vendorImg.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
+            cell.vendorLabel.text = restaurantLabel[indexPath.row]
+            cell.amountLabel.text = amount[indexPath.row]
+            cell.vendorLocation.text = neighborhood[indexPath.row]
+            cell.cuisineLabel.text = cuisine[indexPath.row]
+            
+            return cell
+            
+        } else {
+            
+            let cell = tableView.dequeueReusableCell(withIdentifier: "listCell3", for: indexPath) as! MainListCell3
+            
+            cell.vendorImg.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
+            cell.vendorLabel.text = restaurantLabel[indexPath.row]
+            cell.amountLabel.text = amount[indexPath.row]
+            cell.vendorLocation.text = neighborhood[indexPath.row]
+            cell.cuisineLabel.text = cuisine[indexPath.row]
+            
+            return cell
+            
+        }
         
     }
     
@@ -104,6 +132,13 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let nibName = UINib(nibName: "MainListCell", bundle: nil)
         listView.register(nibName, forCellReuseIdentifier: "listCell")
+        
+        let nibTest1 = UINib(nibName: "MainListCell2", bundle: nil)
+        listView.register(nibTest1, forCellReuseIdentifier: "listCell2")
+        
+        let nibTest2 = UINib(nibName: "MainListCell3", bundle: nil)
+        listView.register(nibTest2, forCellReuseIdentifier: "listCell3")
+
         
         // Do any additional setup after loading the view.
     }

@@ -1,5 +1,5 @@
 //
-//  MainListCell2.swift
+//  MainListCell3.swift
 //  OMO XP
 //
 //  Created by Casper Castellini on 5/9/17.
@@ -8,8 +8,7 @@
 
 import UIKit
 
-class MainListCell2: UITableViewCell {
-    
+class MainListCell3: UITableViewCell {
     
     @IBOutlet var vendorImg: UIImageView!
     
@@ -20,7 +19,6 @@ class MainListCell2: UITableViewCell {
     @IBOutlet var amountLabel: UILabel!
     
     @IBOutlet var cuisineLabel: UILabel!
-    
     
 
     override func awakeFromNib() {
