@@ -21,7 +21,9 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet var locationBar: UISearchBar!
 
-    @IBOutlet var scheduleLabel: UILabel!
+    @IBAction func btnSchedule(_ sender: Any) {
+    }
+    
     
     @IBOutlet var resultsTableView: UITableView!
     
@@ -50,7 +52,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let view = UIView()
-        view.backgroundColor = UIColor.white
+        view.backgroundColor = UIColor(red: (248.0/255.0), green: (247.0/255.0), blue: (241.0/255.0), alpha: 1.0)
         
      /*
         // Uncomment to add a UIImage into cell row 
@@ -64,7 +66,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         label.textColor = UIColor.black
         label.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
         label.textAlignment = .center
-        label.frame = CGRect(x: 2.5, y: 2.5, width: 72, height: 15)
+        label.frame = CGRect(x: 2.5, y: 4.5, width: 72, height: 15)
         
         
         view.addSubview(label)

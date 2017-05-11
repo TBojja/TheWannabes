@@ -89,8 +89,10 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        
         let header = ExpandableHeaderView()
         header.customInit(title: sections[section].headerTitle, section: section, delegate: self)
+        
         return header
         
          /*
