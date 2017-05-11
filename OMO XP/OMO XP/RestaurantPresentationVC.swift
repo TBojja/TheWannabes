@@ -126,6 +126,10 @@ class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UI
         
         // Do any additional setup after loading the view.
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return UIStatusBarStyle.lightContent
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

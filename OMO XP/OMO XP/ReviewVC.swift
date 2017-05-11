@@ -43,6 +43,7 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     func tableView (_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
     }
+
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
@@ -50,21 +51,39 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        var cell = tableView.dequeueReusableCell(withIdentifier: "firstCell", for: indexPath) as! ATableViewCell
+        if (indexPath.row == 0) {
+            
+        let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! HeaderCell
+            
+            cell.headerLabel.text = "PLEASE REVIEW YOUR ORDER SUMMARY"
+            
+            return cell
+            
+        } else {
+            
+        let cell = tableView.dequeueReusableCell(withIdentifier: "subheader", for: indexPath) as! SubHeaderCell
+            
+            cell.reservationInfoLabel.text = ""
+            cell.scheduleInfoLabel.text = ""
+            
+            return cell
+            
+            // cell.miniHeaderLabel?.text = miniTitle[indexPath.row]
+            // cell.miniHeaderLabel?.numberOfLines = 0
         
-        if cell == nil {
-            cell = UITableViewCell(style: .default, reuseIdentifier: "firstCell") as! ATableViewCell
         }
-        
-        cell.miniHeaderLabel?.text = miniTitle[indexPath.row]
-        cell.miniHeaderLabel?.numberOfLines = 0
-        
-        return cell
     }
+    
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let nibHeader = UINib(nibName: "HeaderCell", bundle: nil)
+        reviewTableView.register(nibHeader, forCellReuseIdentifier: "header")
+        
+        let nibSubHeader = UINib(nibName: "SubHeaderCell", bundle: nil)
+        reviewTableView.register(nibSubHeader, forCellReuseIdentifier: "subheader")
         
         // reviewTableView.estimatedRowHeight = 50
         // reviewTableView.estimatedSectionHeaderHeight = 150
