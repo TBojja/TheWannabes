@@ -91,7 +91,7 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             // uploads images into indexPaths
             cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
             // customize looks of images in each cell
-                cell.vendorImage.layer.shadowColor = UIColor.black.cgColor
+                cell.vendorImage.layer.shadowColor = UIColor.darkGray.cgColor
                 cell.vendorImage.layer.shadowOffset = CGSize(width: 0, height: 0)
                 cell.vendorImage.layer.shadowRadius = 3.5
                 cell.vendorImage.layer.shadowOpacity = 1
