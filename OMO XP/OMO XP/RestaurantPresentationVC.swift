@@ -12,26 +12,20 @@ import CoreLocation
 
 class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, MKMapViewDelegate, CLLocationManagerDelegate {
     
-    @IBAction func dismissRestaurant(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
 
     @IBAction func btnBack(_ sender: Any) {
     }
+
     
     @IBOutlet var vendorImg: UIImageView!
     
+    @IBOutlet var btnFav: UIBarButtonItem!
     
-    @IBOutlet var favoriteButton: UIButton!
-    
-    @IBOutlet var amountLabel: UILabel!
-    
-    
+    @IBOutlet var amtLabel: UIBarButtonItem!
+   
     // NOTE: Information Popup
     @IBAction func info(_ sender: Any) {
     }
-    
-    @IBOutlet var vendorLabel: UILabel!
     
     @IBAction func join(_ sender: Any) {
     }
@@ -79,6 +73,7 @@ class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UI
     @IBOutlet var vendorAddress: UILabel!
 
     
+    @IBOutlet var navBar: UINavigationBar!
     
     
     
@@ -123,6 +118,8 @@ class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navBar.backgroundColor = .clear
+        navBar.frame = CGRect(x: 0, y: 0, width: 375, height: 60)
         
         // Do any additional setup after loading the view.
     }

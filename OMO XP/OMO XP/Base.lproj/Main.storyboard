@@ -8,6 +8,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -1567,37 +1568,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="255"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YYg-Me-4hY">
-                                <rect key="frame" x="11" y="50" width="70" height="25"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
-                                <state key="normal" title="  BACK" image="arrowRight"/>
-                                <connections>
-                                    <action selector="btnBack:" destination="ey0-oe-M2w" eventType="touchUpInside" id="8pQ-xO-5nm"/>
-                                    <action selector="dismissRestaurant:" destination="ey0-oe-M2w" eventType="touchUpInside" id="Udf-fh-eQl"/>
-                                    <segue destination="8gJ-lO-2km" kind="show" identifier="dismissRestaurant" id="tlM-G1-j3Y"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$20 min" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zzG-vU-YSB">
-                                <rect key="frame" x="290" y="40" width="70" height="45"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8fQ-l7-6ka">
-                                <rect key="frame" x="0.0" y="211" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.20000000300000001" green="0.20000000300000001" blue="0.20000000300000001" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsLetterSpacingToFitWidth="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUn-Ne-jie">
-                                <rect key="frame" x="97" y="220" width="180" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" barStyle="blackTranslucent" translatesAutoresizingMaskIntoConstraints="NO" id="x2g-sV-cfj">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Restaurant" id="K6j-Ah-vI4">
+                                        <barButtonItem key="leftBarButtonItem" image="arrowRight" id="akZ-J1-5h2" userLabel="btn Back">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <action selector="btnBack:" destination="ey0-oe-M2w" id="0aS-TF-Aym"/>
+                                                <segue destination="8gJ-lO-2km" kind="show" id="SBo-jL-aui"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <rightBarButtonItems>
+                                            <barButtonItem title="$20 min" id="yqK-r9-K56">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </barButtonItem>
+                                            <barButtonItem image="favourite" id="THA-Jr-75h">
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </barButtonItem>
+                                        </rightBarButtonItems>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZeE-pT-HMF" userLabel="btnJoin">
                                 <rect key="frame" x="45.5" y="347.5" width="25" height="25"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1730,17 +1723,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgr-pz-fSR" userLabel="btnInfo">
-                                <rect key="frame" x="150" y="136" width="75.5" height="75.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="infoIcon" backgroundImage="ellipse1">
-                                    <attributedString key="attributedTitle"/>
-                                </state>
-                                <connections>
-                                    <action selector="info:" destination="ey0-oe-M2w" eventType="touchUpInside" id="In4-tg-2vh"/>
-                                    <segue destination="fkj-LR-6rE" kind="presentation" identifier="" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="0gU-sG-xPA"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wFg-yG-fex">
                                 <rect key="frame" x="11" y="406" width="348" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1761,10 +1743,10 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RWD-ot-s0h">
-                                <rect key="frame" x="11" y="449" width="110" height="15"/>
+                                <rect key="frame" x="11" y="449" width="167" height="15"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="RESERVE A TABLE">
+                                    <fragment content="RESERVE SEAT(S) OR TABLE">
                                         <attributes>
                                             <color key="NSColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
                                             <font key="NSFont" size="12" name="HelveticaNeue-Bold"/>
@@ -1823,23 +1805,29 @@
                                     <outlet property="delegate" destination="ey0-oe-M2w" id="8Ac-Ia-huu"/>
                                 </connections>
                             </collectionView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OBn-rL-srZ">
-                                <rect key="frame" x="244" y="48" width="32.5" height="29.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hgr-pz-fSR" userLabel="btnInfo">
+                                <rect key="frame" x="150" y="179" width="75.5" height="75.5"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="favourite"/>
+                                <state key="normal" image="infoIcon" backgroundImage="ellipse1">
+                                    <attributedString key="attributedTitle"/>
+                                </state>
+                                <connections>
+                                    <action selector="info:" destination="ey0-oe-M2w" eventType="touchUpInside" id="In4-tg-2vh"/>
+                                    <segue destination="fkj-LR-6rE" kind="presentation" identifier="" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="0gU-sG-xPA"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <outlet property="amountLabel" destination="zzG-vU-YSB" id="Ri7-YS-rou"/>
+                        <outlet property="amtLabel" destination="yqK-r9-K56" id="qUI-W8-V7n"/>
+                        <outlet property="btnFav" destination="THA-Jr-75h" id="9HG-XO-0oB"/>
                         <outlet property="descriptionLabel" destination="nvB-vl-mZl" id="4N8-2K-R4W"/>
-                        <outlet property="favoriteButton" destination="OBn-rL-srZ" id="FSp-NJ-ucj"/>
                         <outlet property="imgProfile" destination="20N-Hd-JJI" id="LCf-Mt-j1M"/>
+                        <outlet property="navBar" destination="x2g-sV-cfj" id="bvY-Ob-dwi"/>
                         <outlet property="timeCollection" destination="7dY-kb-bbv" id="SQU-Os-eBE"/>
                         <outlet property="vendorAddress" destination="pzW-Aj-fYx" id="JCQ-e9-vb5"/>
                         <outlet property="vendorImg" destination="TGf-c8-YlB" id="Lhr-DW-wtk"/>
-                        <outlet property="vendorLabel" destination="jUn-Ne-jie" id="iuX-2M-Qcm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3ac-kW-9U3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2452,7 +2440,7 @@ Every moment at The Church Key is an interactive experience. From our inventive 
     <inferredMetricsTieBreakers>
         <segue reference="BLD-gh-Jyz"/>
         <segue reference="lHG-CQ-n4F"/>
-        <segue reference="tlM-G1-j3Y"/>
+        <segue reference="SBo-jL-aui"/>
         <segue reference="XfW-m2-H9I"/>
         <segue reference="5yD-0f-pXz"/>
         <segue reference="uv1-Vl-zhp"/>
