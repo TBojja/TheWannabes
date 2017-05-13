@@ -52,7 +52,7 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     let restaurantLabel = ["Katana", "The Church Key", "BOA Steakhouse", "Cecconi's", "Angelini Osteria", "Tender Greens"]
     
-    let neighborhood = ["West Hollywood", "Mid-Wilshire", "Beverly Hills", "Studio City", "Santa Monica", "Fairfax"]
+    let neighborhood = ["West Hollywood", "Mid-Wilshire", "Beverly Hills", "West Hollywood", "Santa Monica", "Fairfax"]
     
     let cuisine = ["Sushi", "American", "Steakhouse", "Italian", "Italian", "American"]
     
