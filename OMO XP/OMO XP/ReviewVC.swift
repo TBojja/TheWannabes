@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
+class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var reviewTableView: UITableView!
     
@@ -17,11 +17,8 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
     let headerImg: [UIImage] = [#imageLiteral(resourceName: "review")]
     var miniTitle: [String] = ["REVIEW"]
     let reviewImage: [UIImage] = [#imageLiteral(resourceName: "review")]
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return headerTitles.count
-    }
-    
+
+
 /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
@@ -38,15 +35,15 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         
         return view
     }
-*/
-    
+
+
     func tableView (_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 100
     }
-
+*/
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,6 +53,7 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: "header", for: indexPath) as! HeaderCell
             
             cell.headerLabel.text = "PLEASE REVIEW YOUR ORDER SUMMARY"
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
             
@@ -63,21 +61,34 @@ class ReviewVC: UIViewController, UITabBarDelegate, UITableViewDataSource {
             
         let cell = tableView.dequeueReusableCell(withIdentifier: "subheader", for: indexPath) as! SubHeaderCell
             
-            cell.reservationInfoLabel.text = ""
-            cell.scheduleInfoLabel.text = ""
+            cell.reservationInfoLabel.text = "John Doe"
+            cell.scheduleInfoLabel.text = "Table for 5, Tomorrow at 9:00pm"
+            cell.scheduleInfoLabel.numberOfLines = 5
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+           
             
             return cell
-            
-            // cell.miniHeaderLabel?.text = miniTitle[indexPath.row]
-            // cell.miniHeaderLabel?.numberOfLines = 0
         
         }
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        // var height: CGFloat = CGFloat()
+        if (indexPath.row == 0) {
+            return 100
+        } else {
+            return 125
+        }
+        
+    }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        reviewTableView.dataSource = self
+        reviewTableView.delegate = self
+        
         
         let nibHeader = UINib(nibName: "HeaderCell", bundle: nil)
         reviewTableView.register(nibHeader, forCellReuseIdentifier: "header")
