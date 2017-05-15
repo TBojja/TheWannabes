@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RW5-wW-USA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="O1x-DU-vnf">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -2411,12 +2411,12 @@ Every moment at The Church Key is an interactive experience. From our inventive 
     <inferredMetricsTieBreakers>
         <segue reference="BLD-gh-Jyz"/>
         <segue reference="23f-r2-MOc"/>
-        <segue reference="SBo-jL-aui"/>
-        <segue reference="uv1-Vl-zhp"/>
-        <segue reference="e2M-WC-LD1"/>
-        <segue reference="jSI-ni-G70"/>
-        <segue reference="Y0W-GJ-dw1"/>
+        <segue reference="ViV-4R-Nk0"/>
         <segue reference="Qhw-d9-fau"/>
+        <segue reference="Y0W-GJ-dw1"/>
+        <segue reference="o3V-kT-9EI"/>
+        <segue reference="VCY-j9-OWi"/>
+        <segue reference="B11-Wc-Ze7"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
