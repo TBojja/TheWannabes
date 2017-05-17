@@ -118,10 +118,9 @@ class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Customize navigationBar
         let attrs = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Medium", size: 16)! ]
         UINavigationBar.appearance().titleTextAttributes = attrs
-        
-        // Customize navigationBar
         
         // navBar.backgroundColor = UIColor.clear
         navBar.frame = CGRect(x: 0, y: 0, width: 375, height: 64)

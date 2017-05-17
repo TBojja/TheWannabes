@@ -9,6 +9,13 @@
 import UIKit
 
 class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    
+    @IBOutlet var navBar: UINavigationBar!
+    
+    @IBOutlet var leftBarItem: UIBarButtonItem!
+    
+    
 
     @IBOutlet var reviewTableView: UITableView!
     
@@ -94,6 +101,12 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Customize UINavigationBar
+        let attrs = [NSFontAttributeName: UIFont(name: "HelveticaNeue-Medium", size: 16)!]
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        
+        navBar.frame = CGRect(x: 0, y: 0, width: 375, height: 64)
         
         reviewTableView.dataSource = self
         reviewTableView.delegate = self

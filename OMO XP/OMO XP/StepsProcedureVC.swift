@@ -10,6 +10,11 @@ import UIKit
 
 class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSource, ExpandableHeaderViewDelegate {
 
+    @IBOutlet var navBar: UINavigationBar!
+    
+    @IBAction func leftBarItem(_ sender: Any) {
+    }
+    
     
     @IBAction func btnMinus(_ sender: Any) {
     }
@@ -57,6 +62,13 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        
+        // Customize UINavigationBar
+        let attrs = [ NSFontAttributeName: UIFont(name: "HelveticaNeue-Medium", size: 16)! ]
+        UINavigationBar.appearance().titleTextAttributes = attrs
+        
+        navBar.frame = CGRect(x: 0, y: 0, width: 375, height: 64)
     }
 
     override func didReceiveMemoryWarning() {
