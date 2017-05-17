@@ -43,7 +43,7 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -57,7 +57,7 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             
             return cell
             
-        } else {
+        } else  if (indexPath.row == 1) {
             
         let cell = tableView.dequeueReusableCell(withIdentifier: "subheader", for: indexPath) as! SubHeaderCell
             
@@ -66,9 +66,16 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.scheduleInfoLabel.numberOfLines = 5
             cell.selectionStyle = UITableViewCellSelectionStyle.none
            
-            
             return cell
         
+        } else {
+            
+        let cell = tableView.dequeueReusableCell(withIdentifier: "preferences", for: indexPath) as! PreferencesCell
+            
+            cell.headerLabel.text = "CASPER'S MENU PREFERENCES"
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
+            return cell
         }
     }
     
@@ -76,8 +83,10 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         // var height: CGFloat = CGFloat()
         if (indexPath.row == 0) {
             return 100
-        } else {
+        } else  if (indexPath.row == 1) {
             return 125
+        } else {
+            return 150
         }
         
     }
@@ -95,6 +104,9 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let nibSubHeader = UINib(nibName: "SubHeaderCell", bundle: nil)
         reviewTableView.register(nibSubHeader, forCellReuseIdentifier: "subheader")
+        
+        let nibPreferences = UINib(nibName: "PreferencesCell", bundle: nil)
+        reviewTableView.register(nibPreferences, forCellReuseIdentifier: "preferences")
         
         // reviewTableView.estimatedRowHeight = 50
         // reviewTableView.estimatedSectionHeaderHeight = 150
