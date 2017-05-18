@@ -45,6 +45,8 @@
 		AF5F31161E99D93200CF088A /* JoinPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF5F31151E99D93200CF088A /* JoinPopupView.swift */; };
 		AF7A1C3E1ECC514F00F3C387 /* PreferencesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1C3C1ECC514F00F3C387 /* PreferencesCell.swift */; };
 		AF7A1C3F1ECC514F00F3C387 /* PreferencesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1C3D1ECC514F00F3C387 /* PreferencesCell.xib */; };
+		AF7A1C421ECD362900F3C387 /* PaymentInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7A1C401ECD362900F3C387 /* PaymentInfoCell.swift */; };
+		AF7A1C431ECD362900F3C387 /* PaymentInfoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = AF7A1C411ECD362900F3C387 /* PaymentInfoCell.xib */; };
 		AF7CC39B1EBC593800D2B3B5 /* Section.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC39A1EBC593800D2B3B5 /* Section.swift */; };
 		AF7CC39D1EBC59E100D2B3B5 /* ExpandableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC39C1EBC59E100D2B3B5 /* ExpandableHeaderView.swift */; };
 		AF7CC39F1EBC5D2B00D2B3B5 /* StepsProcedureVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7CC39E1EBC5D2B00D2B3B5 /* StepsProcedureVC.swift */; };
@@ -125,6 +127,8 @@
 		AF5F31151E99D93200CF088A /* JoinPopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoinPopupView.swift; sourceTree = "<group>"; };
 		AF7A1C3C1ECC514F00F3C387 /* PreferencesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesCell.swift; sourceTree = "<group>"; };
 		AF7A1C3D1ECC514F00F3C387 /* PreferencesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PreferencesCell.xib; sourceTree = "<group>"; };
+		AF7A1C401ECD362900F3C387 /* PaymentInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentInfoCell.swift; sourceTree = "<group>"; };
+		AF7A1C411ECD362900F3C387 /* PaymentInfoCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentInfoCell.xib; sourceTree = "<group>"; };
 		AF7CC39A1EBC593800D2B3B5 /* Section.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Section.swift; sourceTree = "<group>"; };
 		AF7CC39C1EBC59E100D2B3B5 /* ExpandableHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpandableHeaderView.swift; sourceTree = "<group>"; };
 		AF7CC39E1EBC5D2B00D2B3B5 /* StepsProcedureVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StepsProcedureVC.swift; sourceTree = "<group>"; };
@@ -221,6 +225,8 @@
 				AF31E79A1EC3F7E200EED211 /* SubHeaderCell.xib */,
 				AF7A1C3C1ECC514F00F3C387 /* PreferencesCell.swift */,
 				AF7A1C3D1ECC514F00F3C387 /* PreferencesCell.xib */,
+				AF7A1C401ECD362900F3C387 /* PaymentInfoCell.swift */,
+				AF7A1C411ECD362900F3C387 /* PaymentInfoCell.xib */,
 				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
 				AF2FCAC51E9719D7005AB964 /* Assets.xcassets */,
 				AF2FCAC71E9719D7005AB964 /* LaunchScreen.storyboard */,
@@ -422,6 +428,7 @@
 				AF2FCAE11E972023005AB964 /* FontBNBook.otf in Resources */,
 				AFF469D31EA43B8200F9038A /* table.jpg in Resources */,
 				AFF469DA1EA43F1100F9038A /* dining.jpg in Resources */,
+				AF7A1C431ECD362900F3C387 /* PaymentInfoCell.xib in Resources */,
 				AF31E7A21EC9A5ED00EED211 /* BC.pdf in Resources */,
 				AFF469D01EA43B8200F9038A /* chairs.jpg in Resources */,
 				AF2FCAE21E972023005AB964 /* FontBNLight.otf in Resources */,
@@ -468,6 +475,7 @@
 				AF2FCAEA1E975DF9005AB964 /* MainMenuVC.swift in Sources */,
 				AFAA31881E9B522C009CD110 /* RestaurantJoinView.swift in Sources */,
 				AF0F0A9B1EAEB1820027050C /* SideBarTableVC.swift in Sources */,
+				AF7A1C421ECD362900F3C387 /* PaymentInfoCell.swift in Sources */,
 				AFAA31801E9A79E2009CD110 /* PhoneVC.swift in Sources */,
 				AF7CC3B21EBDC55600D2B3B5 /* ProfileTableVC.swift in Sources */,
 				AF7CC3D61EC3D21E00D2B3B5 /* MainListCell2.swift in Sources */,

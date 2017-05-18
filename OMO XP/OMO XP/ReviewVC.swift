@@ -50,7 +50,7 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 */
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 4
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -75,11 +75,19 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
            
             return cell
         
-        } else {
+        } else  if (indexPath.row == 2) {
             
         let cell = tableView.dequeueReusableCell(withIdentifier: "preferences", for: indexPath) as! PreferencesCell
             
-            cell.headerLabel.text = "CASPER'S MENU PREFERENCES"
+            cell.headerLabel.text = "JOHN'S MENU PREFERENCES"
+            cell.selectionStyle = UITableViewCellSelectionStyle.none
+            
+            return cell
+        } else {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "payment", for: indexPath)
+            as! PaymentInfoCell
+            
             cell.selectionStyle = UITableViewCellSelectionStyle.none
             
             return cell
@@ -92,8 +100,10 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             return 100
         } else  if (indexPath.row == 1) {
             return 125
-        } else {
+        } else  if (indexPath.row == 2) {
             return 150
+        } else {
+            return 200
         }
         
     }
@@ -120,6 +130,9 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         let nibPreferences = UINib(nibName: "PreferencesCell", bundle: nil)
         reviewTableView.register(nibPreferences, forCellReuseIdentifier: "preferences")
+        
+        let nibPayment = UINib(nibName: "PaymentInfoCell", bundle: nil)
+        reviewTableView.register(nibPayment, forCellReuseIdentifier: "payment")
         
         // reviewTableView.estimatedRowHeight = 50
         // reviewTableView.estimatedSectionHeaderHeight = 150

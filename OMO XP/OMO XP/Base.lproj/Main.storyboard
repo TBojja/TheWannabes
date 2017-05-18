@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BoZ-nY-Jga">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1276,7 +1276,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnReview:" destination="BoZ-nY-Jga" eventType="touchUpInside" id="qW6-HE-QL6"/>
-                                    <segue destination="HjN-P1-8pZ" kind="show" id="PuI-c7-4P2"/>
+                                    <segue destination="RW5-wW-USA" kind="show" id="2Dx-9y-m9f"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" fixedFrame="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yfl-s4-09M">
@@ -1454,11 +1454,7 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Review Reservation" id="0Lr-tu-azf">
-                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="0gt-jD-PkG">
-                                            <connections>
-                                                <segue destination="BoZ-nY-Jga" kind="show" id="BLD-gh-Jyz"/>
-                                            </connections>
-                                        </barButtonItem>
+                                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="0gt-jD-PkG"/>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -1476,9 +1472,6 @@
                                         </fragment>
                                     </attributedString>
                                 </state>
-                                <connections>
-                                    <segue destination="ey0-oe-M2w" kind="show" id="23f-r2-MOc"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1527,7 +1520,11 @@
                                 </textAttributes>
                                 <items>
                                     <navigationItem title="Review" id="AwD-6m-rF3">
-                                        <barButtonItem key="leftBarButtonItem" image="arrowRight" id="oXC-QJ-FCb"/>
+                                        <barButtonItem key="leftBarButtonItem" image="arrowRight" id="oXC-QJ-FCb">
+                                            <connections>
+                                                <segue destination="ey0-oe-M2w" kind="show" id="Atf-1M-nOK"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -2430,14 +2427,13 @@ Every moment at The Church Key is an interactive experience. From our inventive 
         <image name="vectorrect3" width="140" height="35"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="BLD-gh-Jyz"/>
-        <segue reference="23f-r2-MOc"/>
-        <segue reference="ViV-4R-Nk0"/>
-        <segue reference="Qhw-d9-fau"/>
-        <segue reference="Y0W-GJ-dw1"/>
         <segue reference="o3V-kT-9EI"/>
+        <segue reference="Qhw-d9-fau"/>
+        <segue reference="CnN-Ry-oq7"/>
         <segue reference="VCY-j9-OWi"/>
+        <segue reference="ViV-4R-Nk0"/>
         <segue reference="B11-Wc-Ze7"/>
+        <segue reference="Atf-1M-nOK"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
