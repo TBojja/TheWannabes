@@ -15,7 +15,6 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBAction func leftBarItem(_ sender: Any) {
     }
     
-    
     @IBAction func btnMinus(_ sender: Any) {
     }
     

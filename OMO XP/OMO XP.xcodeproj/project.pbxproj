@@ -218,15 +218,7 @@
 				AFF469C81EA2FB0100F9038A /* PopupVC.swift */,
 				AFF469C61EA2FAC000F9038A /* PopupView.swift */,
 				AF7CC3A11EBC68EC00D2B3B5 /* Procedures */,
-				AF0F0AA41EB17CDB0027050C /* ReviewVC.swift */,
-				AF31E7951EC3F65400EED211 /* HeaderCell.swift */,
-				AF31E7961EC3F65400EED211 /* HeaderCell.xib */,
-				AF31E7991EC3F7E200EED211 /* SubHeaderCell.swift */,
-				AF31E79A1EC3F7E200EED211 /* SubHeaderCell.xib */,
-				AF7A1C3C1ECC514F00F3C387 /* PreferencesCell.swift */,
-				AF7A1C3D1ECC514F00F3C387 /* PreferencesCell.xib */,
-				AF7A1C401ECD362900F3C387 /* PaymentInfoCell.swift */,
-				AF7A1C411ECD362900F3C387 /* PaymentInfoCell.xib */,
+				AF7A1C441ECD931200F3C387 /* Review Page */,
 				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
 				AF2FCAC51E9719D7005AB964 /* Assets.xcassets */,
 				AF2FCAC71E9719D7005AB964 /* LaunchScreen.storyboard */,
@@ -269,6 +261,22 @@
 				AF2FCAEC1E977877005AB964 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		AF7A1C441ECD931200F3C387 /* Review Page */ = {
+			isa = PBXGroup;
+			children = (
+				AF0F0AA41EB17CDB0027050C /* ReviewVC.swift */,
+				AF31E7951EC3F65400EED211 /* HeaderCell.swift */,
+				AF31E7961EC3F65400EED211 /* HeaderCell.xib */,
+				AF31E7991EC3F7E200EED211 /* SubHeaderCell.swift */,
+				AF31E79A1EC3F7E200EED211 /* SubHeaderCell.xib */,
+				AF7A1C3C1ECC514F00F3C387 /* PreferencesCell.swift */,
+				AF7A1C3D1ECC514F00F3C387 /* PreferencesCell.xib */,
+				AF7A1C401ECD362900F3C387 /* PaymentInfoCell.swift */,
+				AF7A1C411ECD362900F3C387 /* PaymentInfoCell.xib */,
+			);
+			name = "Review Page";
 			sourceTree = "<group>";
 		};
 		AF7CC3951EB93F5F00D2B3B5 /* Restaurant Popups Views   */ = {

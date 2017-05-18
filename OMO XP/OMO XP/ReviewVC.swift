@@ -15,9 +15,12 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var leftBarItem: UIBarButtonItem!
     
-    
 
     @IBOutlet var reviewTableView: UITableView!
+    
+    @IBAction func btnOrder(_ sender: Any) {
+    }
+    
     
     
     let headerTitles: [String] = ["PLEASE REVIEW YOUR ORDER SUMMARY", "CASPER'S MENU PREFERENCES:"]
@@ -25,6 +28,8 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     var miniTitle: [String] = ["REVIEW"]
     let reviewImage: [UIImage] = [#imageLiteral(resourceName: "review")]
 
+    
+    
 
 /*
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -136,7 +141,7 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         // reviewTableView.estimatedRowHeight = 50
         // reviewTableView.estimatedSectionHeaderHeight = 150
-        // reviewTableView.rowHeight = UITableViewAutomaticDimension
+        // reviewTableView.rowHeight = UITableViewAutomaticDimension // < -- Calculates rows height automatically
 
         // Do any additional setup after loading the view.
     }
