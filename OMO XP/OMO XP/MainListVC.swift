@@ -93,20 +93,20 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             // customize looks of images in each cell
                 cell.vendorImage.layer.shadowColor = UIColor.darkGray.cgColor
                 cell.vendorImage.layer.shadowOffset = CGSize(width: 0, height: 0)
-                cell.vendorImage.layer.shadowRadius = 3.5
+                cell.vendorImage.layer.shadowRadius = 1.5
                 cell.vendorImage.layer.shadowOpacity = 1
             // uploads vendor names into indexPaths
             cell.vendorLabel.text = restaurantLabel[indexPath.row]
             // customize style of names in each cell
                 cell.vendorLabel.textColor = UIColor.white
                 cell.vendorLabel.font = UIFont(name: "HelveticaNeue-Regular", size: 15)
-                cell.vendorLabel.layer.shadowColor = UIColor.white.cgColor
+                cell.vendorLabel.layer.shadowColor = UIColor.darkGray.cgColor
                 cell.vendorLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
                 cell.vendorLabel.layer.shadowRadius = 2
                 cell.vendorLabel.layer.shadowOpacity = 0.5
             
             cell.amountLabel.text = amount[indexPath.row]
-            cell.amountLabel.font = UIFont(name: "HelveticaNeue-Bold", size: 12)
+            cell.amountLabel.font = UIFont(name: "HelveticaNeue-Medium", size: 14)
                 cell.amountLabel.layer.shadowColor = UIColor.white.cgColor
                 cell.amountLabel.layer.shadowOffset = CGSize(width: 0, height: 0)
                 cell.amountLabel.layer.shadowRadius = 1

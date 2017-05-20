@@ -134,6 +134,7 @@ class RestaurantPresentationVC: UIViewController, UICollectionViewDataSource, UI
         // Do any additional setup after loading the view.
     }
     
+    // Customize status bar to fit background color
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return UIStatusBarStyle.lightContent
     }
