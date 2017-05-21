@@ -1371,6 +1371,7 @@
                                     <navigationItem title="Review" id="AwD-6m-rF3">
                                         <barButtonItem key="leftBarButtonItem" image="arrowRight" id="oXC-QJ-FCb">
                                             <connections>
+                                                <action selector="leftBarItem:" destination="RW5-wW-USA" id="e1e-WT-rue"/>
                                                 <segue destination="BoZ-nY-Jga" kind="show" id="f6z-gr-RJQ"/>
                                             </connections>
                                         </barButtonItem>
@@ -1394,7 +1395,6 @@
                         <color key="backgroundColor" red="0.96470588239999999" green="0.96078431369999995" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
-                        <outlet property="leftBarItem" destination="oXC-QJ-FCb" id="hfv-cz-GwT"/>
                         <outlet property="navBar" destination="VCL-9L-1D2" id="QyF-Lf-u68"/>
                         <outlet property="reviewTableView" destination="vW3-Vi-mTE" id="Gbw-oJ-MhS"/>
                     </connections>
@@ -2290,9 +2290,9 @@ Every moment at The Church Key is an interactive experience. From our inventive 
         <segue reference="uv1-Vl-zhp"/>
         <segue reference="VCY-j9-OWi"/>
         <segue reference="5yD-0f-pXz"/>
-        <segue reference="XfW-m2-H9I"/>
         <segue reference="e2M-WC-LD1"/>
         <segue reference="lHG-CQ-n4F"/>
+        <segue reference="ebj-H9-Zk1"/>
         <segue reference="f6z-gr-RJQ"/>
         <segue reference="CnN-Ry-oq7"/>
     </inferredMetricsTieBreakers>

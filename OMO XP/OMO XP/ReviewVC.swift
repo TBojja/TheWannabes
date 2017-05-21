@@ -13,9 +13,9 @@ class ReviewVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet var navBar: UINavigationBar!
     
-    @IBOutlet var leftBarItem: UIBarButtonItem!
-    
-
+    @IBAction func leftBarItem(_ sender: Any) {
+    }
+  
     @IBOutlet var reviewTableView: UITableView!
     
     @IBAction func btnOrder(_ sender: Any) {
