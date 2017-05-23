@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate {
 
     
     @IBAction func dismissSearch(_ sender: Any) {
@@ -19,7 +19,6 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBOutlet var searchBar: UISearchBar!
     
-    @IBOutlet var locationBar: UISearchBar!
 
     @IBAction func btnSchedule(_ sender: Any) {
     }
@@ -31,9 +30,13 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     // let cellImages: [UIImage] = [#imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy")]
     
-    var cellResults: [String] = ["Katana", "The Church Key", "Tender Greens", "Fresh Corn Grill", "Serafina"]
+    var cellResults: [String] = ["Katana", "71above", "BOA Steakhouse", "Cecconi", "Angelini Osteria", "The Church Key", "Tender Greens", "Fresh Corn Grill", "Serafina"]
     
     var header: [String] = ["Results"]
+    
+    var filteredData = [String]()
+    
+    var isSearching = false
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return header.count
@@ -44,6 +47,10 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     }
     
     internal func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if isSearching {
+            return filteredData.count
+        }
         
         return cellResults.count
     }
@@ -87,7 +94,13 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "resultsCell", for: indexPath) as! SearchResultCell
         
-        cell.resultsLabel.text = cellResults[indexPath.row]
+        if isSearching {
+            cell.resultsLabel.text = filteredData[indexPath.row]
+        } else {
+            
+            cell.resultsLabel.text = cellResults[indexPath.row]
+        }
+        
         cell.resultsLabel.numberOfLines = 0  // gives as many lines as needed in cell depending on content
         cell.accessoryType = UITableViewCellAccessoryType.disclosureIndicator
         
@@ -95,6 +108,22 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
     }
  
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text == nil || searchBar.text == "" {
+            isSearching = false
+            
+            view.endEditing(true)
+            
+            resultsTableView.reloadData()
+            } else {
+            
+            isSearching = true
+            filteredData = cellResults.filter({$0 == searchBar.text})
+            
+            resultsTableView.reloadData()
+            
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -104,6 +133,9 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         resultsTableView.dataSource = self
         
         resultsTableView.rowHeight = UITableViewAutomaticDimension
+        
+        searchBar.delegate = self
+        searchBar.returnKeyType = UIReturnKeyType.done
         
         // scheduleLabel.text = scheduleToDisplay
         
