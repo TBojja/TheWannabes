@@ -955,7 +955,7 @@
                                 </state>
                                 <connections>
                                     <action selector="btnSearch:" destination="ChH-OF-UP2" eventType="touchUpInside" id="KDO-eb-096"/>
-                                    <segue destination="O1x-DU-vnf" kind="show" identifier="go" id="Dhd-pZ-Idp"/>
+                                    <segue destination="O1x-DU-vnf" kind="show" identifier="go" id="5ir-08-m1T"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -2284,9 +2284,9 @@ Every moment at The Church Key is an interactive experience. From our inventive 
         <segue reference="CnN-Ry-oq7"/>
         <segue reference="XfW-m2-H9I"/>
         <segue reference="VCY-j9-OWi"/>
-        <segue reference="WR6-jk-a7I"/>
-        <segue reference="uv1-Vl-zhp"/>
+        <segue reference="5ir-08-m1T"/>
         <segue reference="e2M-WC-LD1"/>
+        <segue reference="uv1-Vl-zhp"/>
         <segue reference="lHG-CQ-n4F"/>
         <segue reference="f6z-gr-RJQ"/>
     </inferredMetricsTieBreakers>

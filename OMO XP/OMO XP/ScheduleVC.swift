@@ -23,19 +23,18 @@ class ScheduleVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource
     }
     
     
-    
     // Passing pickerView data to search page 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         let destVC = segue.destination as! MainMenuVC
         destVC.scheduleLabel = selectionLabel.text!
     }
-    
+
     // Declaring new array instance variable to store list of reservation data
 
     var schedulePickerData =
     [["1 Person", "2 People", "3 People", "4 People", "5 People", "6 people", "7 People", "8 People", "9 People", "10 People"],
-    ["Today", "Tomorrow", "Wed", "Thu", "Fri", "Sat", "Sun, Apr 30"],
+    ["Today", "Tomorrow", "Wed", "Thu", "Fri", "Sat", "Sun"],
     ["6:00PM", "6:30PM", "7:00PM", "7:30PM", "8:00PM", "8:30PM", "9:00PM", "9:30PM", "10:00PM"]]
     
     
