@@ -136,6 +136,8 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         searchBar.delegate = self
         searchBar.returnKeyType = UIReturnKeyType.done
+        searchBar.isTranslucent = true
+        
         
         // scheduleLabel.text = scheduleToDisplay
         
@@ -151,5 +153,4 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         // Dispose of any resources that can be recreated.
     }
     
-
 }
