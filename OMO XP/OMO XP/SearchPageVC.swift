@@ -12,6 +12,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
 
     
     @IBAction func dismissSearch(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     @IBOutlet var searchBar: UISearchBar!

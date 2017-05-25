@@ -2153,7 +2153,6 @@ Every moment at The Church Key is an interactive experience. From our inventive 
                                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6XX-WB-viZ">
                                             <connections>
                                                 <action selector="dismissSearch:" destination="KlV-jc-lRj" id="Zc5-xI-B8R"/>
-                                                <segue destination="O1x-DU-vnf" kind="show" id="WR6-jk-a7I"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -2279,7 +2278,7 @@ Every moment at The Church Key is an interactive experience. From our inventive 
         <segue reference="CnN-Ry-oq7"/>
         <segue reference="XfW-m2-H9I"/>
         <segue reference="VCY-j9-OWi"/>
-        <segue reference="WR6-jk-a7I"/>
+        <segue reference="5yD-0f-pXz"/>
         <segue reference="uv1-Vl-zhp"/>
         <segue reference="e2M-WC-LD1"/>
         <segue reference="lHG-CQ-n4F"/>
