@@ -13,9 +13,6 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     @IBAction func dismissSearch(_ sender: Any) {
     }
-
-    @IBAction func search(_ sender: Any) {
-    }
     
     @IBOutlet var searchBar: UISearchBar!
     
@@ -28,14 +25,12 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
     
     // var scheduleToDisplay = ""
     
-    // let cellImages: [UIImage] = [#imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy"), #imageLiteral(resourceName: "pin3Copy")]
-    
     var cellResults: [String] = ["Katana", "71above", "BOA Steakhouse", "Cecconi", "Angelini Osteria", "The Church Key", "Tender Greens", "Fresh Corn Grill", "Serafina"]
     
     var header: [String] = ["Results"]
     
+    // Variables or restaurant vendors added for search function
     var filteredData = [String]()
-    
     var isSearching = false
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -50,23 +45,23 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         
         if isSearching {
             return filteredData.count
-        }
-        
-        return cellResults.count
+                } else {
+                    return cellResults.count
+                }
     }
 
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
+        /*
+         // Uncomment to add a UIImage into cell row
+         let image = UIImageView(image: cellImages[section])
+         image.frame = CGRect(x: 5, y: 10, width: 18.5, height: 25)
+         view.addSubview(image)
+         */
+        
         let view = UIView()
         view.backgroundColor = UIColor(red: (248.0/255.0), green: (247.0/255.0), blue: (241.0/255.0), alpha: 1.0)
-        
-     /*
-        // Uncomment to add a UIImage into cell row 
-        let image = UIImageView(image: cellImages[section])
-        image.frame = CGRect(x: 5, y: 10, width: 18.5, height: 25)
-        view.addSubview(image)
-     */
         
         let label = UILabel()
         label.text = "RESULTS"
@@ -97,7 +92,6 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         if isSearching {
             cell.resultsLabel.text = filteredData[indexPath.row]
         } else {
-            
             cell.resultsLabel.text = cellResults[indexPath.row]
         }
         
@@ -107,22 +101,33 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         return cell
         
     }
- 
+    
+    // Functions for adding search
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text == nil || searchBar.text == "" {
-            isSearching = false
-            
-            view.endEditing(true)
-            
-            resultsTableView.reloadData()
-            } else {
-            
+        
+        filteredData = cellResults.filter({ (names: String) -> Bool in
+            return names.lowercased().range(of: searchText.lowercased()) != nil
+        })
+        
+        if searchText != "" {
             isSearching = true
-            filteredData = cellResults.filter({$0 == searchBar.text})
-            
-            resultsTableView.reloadData()
-            
+            self.resultsTableView.reloadData()
+        } else {
+            isSearching = false
+            self.resultsTableView.reloadData()
         }
+    }
+    
+    // End functions for adding search
+    
+    func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+        searchBar.endEditing(true)
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        isSearching = true
+        searchBar.endEditing(true)
+        self.resultsTableView.reloadData()
     }
     
     override func viewDidLoad() {
@@ -135,7 +140,7 @@ class SearchPageVC: UIViewController, UITableViewDelegate, UITableViewDataSource
         resultsTableView.rowHeight = UITableViewAutomaticDimension
         
         searchBar.delegate = self
-        searchBar.returnKeyType = UIReturnKeyType.done
+        searchBar.returnKeyType = UIReturnKeyType.search
         searchBar.isTranslucent = true
         
         
