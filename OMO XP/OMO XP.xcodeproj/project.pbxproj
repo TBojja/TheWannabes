@@ -18,11 +18,6 @@
 		AF2FCAC61E9719D7005AB964 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCAC51E9719D7005AB964 /* Assets.xcassets */; };
 		AF2FCAC91E9719D7005AB964 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCAC71E9719D7005AB964 /* LaunchScreen.storyboard */; };
 		AF2FCAD11E971A92005AB964 /* introimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCAD01E971A92005AB964 /* introimage.jpeg */; };
-		AF2FCAE01E972023005AB964 /* FontBNBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCADB1E971F87005AB964 /* FontBNBold.otf */; };
-		AF2FCAE11E972023005AB964 /* FontBNBook.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCADC1E971F87005AB964 /* FontBNBook.otf */; };
-		AF2FCAE21E972023005AB964 /* FontBNLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCADD1E971F87005AB964 /* FontBNLight.otf */; };
-		AF2FCAE31E972023005AB964 /* FontBNRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCADE1E971F87005AB964 /* FontBNRegular.otf */; };
-		AF2FCAE41E972023005AB964 /* FontBNThin.otf in Resources */ = {isa = PBXBuildFile; fileRef = AF2FCADF1E971F87005AB964 /* FontBNThin.otf */; };
 		AF2FCAE61E972499005AB964 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2FCAE51E972499005AB964 /* LoginVC.swift */; };
 		AF2FCAE81E9724BC005AB964 /* CreateAcctVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */; };
 		AF2FCAEA1E975DF9005AB964 /* MainMenuVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */; };
@@ -100,11 +95,6 @@
 		AF2FCAC81E9719D7005AB964 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AF2FCACA1E9719D7005AB964 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF2FCAD01E971A92005AB964 /* introimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = introimage.jpeg; sourceTree = "<group>"; };
-		AF2FCADB1E971F87005AB964 /* FontBNBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontBNBold.otf; sourceTree = "<group>"; };
-		AF2FCADC1E971F87005AB964 /* FontBNBook.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontBNBook.otf; sourceTree = "<group>"; };
-		AF2FCADD1E971F87005AB964 /* FontBNLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontBNLight.otf; sourceTree = "<group>"; };
-		AF2FCADE1E971F87005AB964 /* FontBNRegular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontBNRegular.otf; sourceTree = "<group>"; };
-		AF2FCADF1E971F87005AB964 /* FontBNThin.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontBNThin.otf; sourceTree = "<group>"; };
 		AF2FCAE51E972499005AB964 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		AF2FCAE71E9724BC005AB964 /* CreateAcctVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAcctVC.swift; sourceTree = "<group>"; };
 		AF2FCAE91E975DF9005AB964 /* MainMenuVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuVC.swift; sourceTree = "<group>"; };
@@ -201,7 +191,6 @@
 		AF2FCABA1E9719D7005AB964 /* OMO XP */ = {
 			isa = PBXGroup;
 			children = (
-				AF2FCADA1E971F4C005AB964 /* Resources */,
 				AF2FCABB1E9719D7005AB964 /* AppDelegate.swift */,
 				AF0F0A9A1EAEB1820027050C /* SideBarTableVC.swift */,
 				AF0F0A9C1EAEB6840027050C /* SideBar.swift */,
@@ -221,9 +210,17 @@
 				AF7A1C441ECD931200F3C387 /* Review Page */,
 				AF2FCABF1E9719D7005AB964 /* Main.storyboard */,
 				AF2FCAC51E9719D7005AB964 /* Assets.xcassets */,
+				AF2FCADA1E971F4C005AB964 /* Resources */,
 				AF2FCAC71E9719D7005AB964 /* LaunchScreen.storyboard */,
 				AF2FCACA1E9719D7005AB964 /* Info.plist */,
 				AF2FCAC21E9719D7005AB964 /* OMO_XP.xcdatamodeld */,
+			);
+			path = "OMO XP";
+			sourceTree = "<group>";
+		};
+		AF2FCADA1E971F4C005AB964 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				AF31E7A31EC9A62000EED211 /* Logoicon.png */,
 				AF31E7A11EC9A5ED00EED211 /* BC.pdf */,
 				AF31E79D1EC683B700EED211 /* OMO.png */,
@@ -239,18 +236,6 @@
 				AFF469D61EA43F1100F9038A /* dining.jpg */,
 				AFF469D71EA43F1100F9038A /* bar.jpg */,
 				AF2FCAD01E971A92005AB964 /* introimage.jpeg */,
-			);
-			path = "OMO XP";
-			sourceTree = "<group>";
-		};
-		AF2FCADA1E971F4C005AB964 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				AF2FCADB1E971F87005AB964 /* FontBNBold.otf */,
-				AF2FCADC1E971F87005AB964 /* FontBNBook.otf */,
-				AF2FCADD1E971F87005AB964 /* FontBNLight.otf */,
-				AF2FCADE1E971F87005AB964 /* FontBNRegular.otf */,
-				AF2FCADF1E971F87005AB964 /* FontBNThin.otf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -430,26 +415,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF7CC3C81EC27DA600D2B3B5 /* MainListCell.xib in Resources */,
-				AF2FCAE01E972023005AB964 /* FontBNBold.otf in Resources */,
 				AF0F0AA31EB08A350027050C /* chef.png in Resources */,
 				AF4DA0201EA038C900BB0902 /* quilonvid.mp4 in Resources */,
-				AF2FCAE11E972023005AB964 /* FontBNBook.otf in Resources */,
 				AFF469D31EA43B8200F9038A /* table.jpg in Resources */,
 				AFF469DA1EA43F1100F9038A /* dining.jpg in Resources */,
 				AF7A1C431ECD362900F3C387 /* PaymentInfoCell.xib in Resources */,
 				AF31E7A21EC9A5ED00EED211 /* BC.pdf in Resources */,
 				AFF469D01EA43B8200F9038A /* chairs.jpg in Resources */,
-				AF2FCAE21E972023005AB964 /* FontBNLight.otf in Resources */,
 				AF7CC3D21EC29B6000D2B3B5 /* fancy.jpg in Resources */,
 				AF31E7981EC3F65400EED211 /* HeaderCell.xib in Resources */,
 				AFF469D81EA43F1100F9038A /* cafe.jpg in Resources */,
 				AFF469D91EA43F1100F9038A /* stairs.jpg in Resources */,
-				AF2FCAE31E972023005AB964 /* FontBNRegular.otf in Resources */,
 				AF7CC3D71EC3D21E00D2B3B5 /* MainListCell2.xib in Resources */,
 				AFF469D21EA43B8200F9038A /* res.jpg in Resources */,
 				AFF469DB1EA43F1100F9038A /* bar.jpg in Resources */,
 				AF7CC3C21EC1C0AB00D2B3B5 /* SearchResultCell.xib in Resources */,
-				AF2FCAE41E972023005AB964 /* FontBNThin.otf in Resources */,
 				AF2FCAC91E9719D7005AB964 /* LaunchScreen.storyboard in Resources */,
 				AF92FC161EB7466300D611DB /* kitchenhub.jpg in Resources */,
 				AF2FCAC61E9719D7005AB964 /* Assets.xcassets in Resources */,

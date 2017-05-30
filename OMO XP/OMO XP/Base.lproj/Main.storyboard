@@ -570,7 +570,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y49-Zm-HwA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596.8000000000002" y="-1005.2473763118442"/>
+            <point key="canvasLocation" x="2162" y="-1005"/>
         </scene>
         <!--FilterVC-->
         <scene sceneID="WJW-1g-lC0">
@@ -609,7 +609,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eAO-UR-wJ4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3500" y="-1005.2473763118442"/>
+            <point key="canvasLocation" x="4121" y="-1322"/>
         </scene>
         <!--Filter TableVC-->
         <scene sceneID="V2f-r2-9uI">
@@ -688,7 +688,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVM-ft-JZe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4244.8000000000002" y="-1005.2473763118442"/>
+            <point key="canvasLocation" x="3403" y="-1005"/>
         </scene>
         <!--ProfileVC-->
         <scene sceneID="71v-8Q-nOg">
@@ -735,7 +735,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eE2-4F-sQW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1871" y="-1005"/>
+            <point key="canvasLocation" x="1404" y="-1321"/>
         </scene>
         <!--JoinVC-->
         <scene sceneID="86c-KH-WxI">
@@ -2277,13 +2277,13 @@ Every moment at The Church Key is an interactive experience. From our inventive 
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="CnN-Ry-oq7"/>
-        <segue reference="ebj-H9-Zk1"/>
-        <segue reference="f6z-gr-RJQ"/>
+        <segue reference="XfW-m2-H9I"/>
         <segue reference="SBo-jL-aui"/>
-        <segue reference="uv1-Vl-zhp"/>
         <segue reference="5yD-0f-pXz"/>
-        <segue reference="e2M-WC-LD1"/>
-        <segue reference="lHG-CQ-n4F"/>
+        <segue reference="B11-Wc-Ze7"/>
+        <segue reference="o3V-kT-9EI"/>
+        <segue reference="ViV-4R-Nk0"/>
+        <segue reference="f6z-gr-RJQ"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" red="0.69411764710000001" green="0.54117647059999996" blue="0.35686274509999999" alpha="1" colorSpace="calibratedRGB"/>
 </document>
