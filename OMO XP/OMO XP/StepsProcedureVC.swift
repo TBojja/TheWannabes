@@ -15,6 +15,9 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     @IBAction func leftBarItem(_ sender: Any) {
     }
     
+    @IBOutlet var minAmtLabel: UILabel!
+    
+    
     @IBAction func btnMinus(_ sender: Any) {
     }
     
@@ -31,33 +34,47 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     var sections = [
         Section(headerTitle: "COURSES",
                 content: ["Single (1 - course)", "Double (2 - course)", "Triple (3 - course)", "Multi (4+ - course)", "Tasting menu"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please select a course"),
         Section(headerTitle: "SUGGESTIONS ",
                 content: ["Most popular", "Recommendations", "Daily Specials"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please choose your suggestions"),
         Section(headerTitle: "CHOICE OF FOOD ",
                 content: ["Beef", "Pork", "Poultry", "Seafood", "Vegetarian", "Vegan"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please choose your protein"),
         Section(headerTitle: "PORTION SIZE ",
                 content: ["Small (up to 6oz)", "Medium (up to 10oz)", "Large (more than 12oz"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please choose your portion size"),
         Section(headerTitle: "SPECIAL REQUEST ",
                 content: ["Allergic reaction", "Lactose intolerance", "Others"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please select additional requests"),
         Section(headerTitle: "HEAT ",
                 content: ["Mild", "Moderate", "Spicy hot"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please choose"),
         Section(headerTitle: "OTHERS ",
                 content: ["Specify"],
-                expanded: false),
+                expanded: false,
+                subtitle: "Please specify anything else"),
         ]
-        
     
+    // Attribute that holds the data from selected indexPath
+    var selectIndexPath: IndexPath!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Initialize indexPath as invalid
+        selectIndexPath = IndexPath(row: -1, section: -1)
+        
+        let nib = UINib(nibName: "ExpandableHeaderView", bundle: nil)
+        tableView.register(nib, forHeaderFooterViewReuseIdentifier: "expandableHeaderView")
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -88,6 +105,8 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        // To toggle/hide
         if (sections[indexPath.section].expanded) {
             return 44
         } else {
@@ -95,31 +114,18 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         }
     }
     
+        // Differentiate between the sections
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
         return 5
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let header = ExpandableHeaderView()
-        header.customInit(title: sections[section].headerTitle, section: section, delegate: self)
+        // Create the headerView
+        let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: "expandableHeaderView") as! ExpandableHeaderView
+        headerView.customInit(title: sections[section].headerTitle, subtitle: sections[section].subtitle, section: section, delegate: self)
         
-        return header
-        
-         /*
-         
-         let frame = tableView.frame
-         let btn = UIButton(type: .system)
-         btn.backgroundColor = .black
-         btn.alpha = 0.35
-         btn.frame = CGRect(x: 8.0, y: 50.0, width: 359.0, height: 51.0)
-         btn.addTarget(self,action: Selector("btnPressed"),for:.touchUpInside)
-         let headerView = UIView(frame: CGRect(x: 8.0, y: 50.0, width: 359.0, height: 51.0))
-         headerView.addSubview(btn)
-         
-         return headerView
-         }
-         */
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -127,25 +133,27 @@ class StepsProcedureVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         cell.textLabel?.text = sections[indexPath.section].content[indexPath.row]
         cell.textLabel?.textAlignment = .center
         cell.textLabel?.font = UIFont(name: "HelveticaNeue", size: 14.0)
+        // Set accessoryType to check mark or non
+        cell.accessoryType = (indexPath == selectIndexPath) ? .checkmark:.none
         
         return cell
     }
     
-    func toggleSection(header: ExpandableHeaderView, section: Int) {
-        sections[section].expanded = !sections[section].expanded
-        
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectIndexPath = indexPath
+        // Set subtitle = title of the cell
+        self.sections[indexPath.section].subtitle = tableView.cellForRow(at: indexPath)?.textLabel?.text
+        sections[indexPath.section].expanded = !sections[indexPath.section].expanded
         tableView.beginUpdates()
-        for i in 0 ..< sections[section].content.count {
-            tableView.reloadRows(at: [IndexPath(row: i, section: section)], with: .automatic)
-        }
+        tableView.reloadSections([indexPath.section], with: .automatic)
         tableView.endUpdates()
     }
-
-/*
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        btnCourses.setTitle("\(sections[indexPath.section].content[indexPath.row])", for: UIControlState.normal)
-        tableViewCourses.isHidden = true
+    
+    func toggleSection(header: ExpandableHeaderView, section: Int) {
+        sections[section].expanded = !sections[section].expanded
+        tableView.beginUpdates()
+        tableView.reloadSections([section], with: .automatic)
+        tableView.endUpdates()
     }
-*/
 
 }

@@ -12,11 +12,15 @@ struct Section {
     var headerTitle: String!
     var content: [String]!
     var expanded: Bool!
+    var subtitle: String!
     
-    init(headerTitle: String, content: [String], expanded: Bool) {
+    
+    // Initializer
+    init(headerTitle: String, content: [String], expanded: Bool, subtitle: String) {
         self.headerTitle = headerTitle
         self.content = content
         self.expanded = expanded
+        self.subtitle = subtitle
         
     }
 }
