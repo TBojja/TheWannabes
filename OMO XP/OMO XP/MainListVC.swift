@@ -67,7 +67,7 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     internal func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if (indexPath.row == 0) {
+/*
         let cell = tableView.dequeueReusableCell(withIdentifier: "listCell", for: indexPath) as! MainListCell
         
         cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
@@ -83,10 +83,10 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         cell.cuisineLabel.text = cuisine[indexPath.row]
         
         return cell
+*/
         
-        } else {
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "listCell2", for: indexPath) as! MainListCell2
+        let cell = tableView.dequeueReusableCell(withIdentifier: "listCell2", for: indexPath) as! MainListCell2
             
             // uploads images into indexPaths
             cell.vendorImage.image = UIImage(named: (restaurantImg[indexPath.row] + ".jpg"))
@@ -117,8 +117,6 @@ class MainListVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
             cell.cuisineLabel.textColor = UIColor.white
             
             return cell
-        
-        }
         
     }
     
